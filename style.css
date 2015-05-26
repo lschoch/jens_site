@@ -1,0 +1,69 @@
+header {
+  background: url('images/blue_background.jpg');
+  background-size: cover;
+  background-color: lightblue;
+  background-repeat: no-repeat;  
+  color: rgb(255, 255, 153);
+  white-space:  nowrap;
+  overflow:  auto;
+  padding-bottom: 0px;
+  margin: 0px 0px;
+}
+
+ .header_image {
+    vertical-align:  middle;
+    margin-right:  10px;
+    padding:  0px  16px;
+    width: 100px;
+    height: 100px;
+}
+
+body {
+  width: 100%;
+}
+
+#nav_container {
+    list-style-type: none;
+    margin-top:  0px;
+    margin-bottom: 15px;
+    background: lightblue;
+    border-top: 1px double black;
+    padding-left: 60px;
+ }
+
+/*.nav_cont_home {
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: black;
+  margin-left:  60px;
+  padding:  5px 10px;
+}*/
+
+li {
+  display: inline-block;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-right-color: black;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-left-color: black;
+  padding:  5px 10px;
+  font-size:  1.5em;
+}
+
+li a {
+  text-decoration: none;
+  padding: 5px 10px;
+  color: blue; 
+}
+
+a:hover {
+    background-color: lightgray;
+    color: white;
+}
+
+iframe {
+  margin-left: 25px;
+  width:  90%;
+  height: 1000px;
+}
