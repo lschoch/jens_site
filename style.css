@@ -1,60 +1,62 @@
-header {
+#header {
   background: url('images/blue_background.jpg');
   background-size: cover;
   background-color: lightblue;
   background-repeat: no-repeat;  
   color: rgb(255, 255, 153);
-  white-space:  nowrap;
-  overflow:  auto;
-  padding-bottom: 0px;
-  margin: 0px 0px;
+  padding: 0px;
+  margin: 0px;
+  height: 130px;
 }
 
- .header_image {
-    vertical-align:  middle;
-    margin-right:  10px;
-    padding:  0px  16px;
-    width: 100px;
-    height: 100px;
+ #header_image {
+  float: left;
+  vertical-align:  middle;
+  padding:  15px  25px 15px 15px;
+  width: 100px;
+  height: 100px;
+}
+
+#header_text {
+  height: 130px;
+  display: table-cell;
+  vertical-align:  middle;
+  text-align:  center ;
+  text-shadow: 2px 2px 2px black;
+  padding-right: 25px;
 }
 
 body {
   width: 100%;
+  margin: 0px;
 }
 
 #nav_container {
+    clear: left;
     list-style-type: none;
-    margin-top:  0px;
+    margin-top: 0px;
     margin-bottom: 15px;
     background: lightblue;
     border-top: 1px double black;
-    padding-left: 60px;
- }
-
-/*.nav_cont_home {
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-left-color: black;
-  margin-left:  60px;
-  padding:  5px 10px;
-}*/
+    border-bottom: 1px double black;
+    padding-left:  0px;
+    font-size:  1.2em;
+  }
 
 li {
   display: inline-block;
   border-right-style: solid;
   border-right-width: 1px;
   border-right-color: black;
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-left-color: black;
-  padding:  5px 10px;
-  font-size:  1.5em;
+  padding:  6px 3px;
+  height: 100%;
 }
 
 li a {
   text-decoration: none;
-  padding: 5px 10px;
+  padding: 3px 3px;
   color: blue; 
+  width: 100%;
 }
 
 a:hover {
@@ -63,7 +65,73 @@ a:hover {
 }
 
 iframe {
-  margin-left: 25px;
-  width:  90%;
-  height: 1000px;
+  display:  block;
+  width:  94%;  
+  height: 1900px;
+  margin-right: 3%;
+  margin-left: 3%;
+  overflow: auto;
+}
+
+
+/*------------------media queries------------------*/
+
+@media (max-width:  2000px) {
+  iframe {
+    height: 1800px;
+  }
+}
+
+@media (max-width:  1800px) {
+  iframe {
+    height: 1600px;
+  }
+}
+
+@media (max-width:  1600px) {
+  iframe {
+    height: 1400px;
+  }
+}
+
+@media (max-width:  1400px) {
+  iframe {
+    height: 1200px;
+  }
+}
+
+@media (max-width:  1200px) {
+  iframe {
+    height: 1000px;
+  }
+}
+
+@media (max-width:  1000px) {
+  iframe {
+    height: 800px;
+  }
+  #header_text {
+    font-size: 0.8em;
+  }
+  #nav_container {
+    font-size:  0.8em;
+  }
+}
+
+@media (max-width:  415px) {
+  iframe {
+   height: 400px;
+  }
+}
+
+@media (max-width:  325px) {
+   iframe {
+    height: 300px;
+  }
+}
+
+@media (max-width:  570px) {
+  #header_text {
+    font-size: 0.6em;
+  }
 }
