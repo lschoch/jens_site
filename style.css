@@ -1,38 +1,38 @@
 header {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  z-index:  1;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index:  1;
 }
 
 #upper_bar {
-  background: url('images/blue_background.jpg');
-  background-size: cover;
-  background-color: lightblue;
-  background-repeat: no-repeat;  
-  color: rgb(255, 255, 153);
-  padding: 0px;
-  margin: 0px;
-  height: 130px;
-  width:  100%;
+    background: url('images/blue_background.jpg');
+    background-size: cover;
+    background-color: lightblue;
+    background-repeat: no-repeat;  
+    color: rgb(255, 255, 153);
+    padding: 0px;
+    margin: 0px;
+    height: 130px;
+    width:  100%;
 }
 
  #header_image {
-  float: left;
-  vertical-align:  middle;
-  padding:  15px  25px 15px 15px;
-  width: 100px;
-  height: 100px;
+    float: left;
+    vertical-align:  middle;
+    padding:  15px  25px 15px 15px;
+    width: 100px;
+    height: 100px;
 }
 
 #header_text {
-  height: 130px;
-  display: table-cell;
-  vertical-align:  middle;
-  text-align:  center ;
-  text-shadow: 2px 2px 2px black;
-  padding-right: 25px;
+    height: 130px;
+    display: table-cell;
+    vertical-align:  middle;
+    text-align:  center ;
+    text-shadow: 2px 2px 2px black;
+    padding-right: 25px;
 }
 
 #nav_container {
@@ -41,119 +41,138 @@ header {
     list-style-type: none;
     margin-top: 0px;
     margin-bottom: 15px;
-    background: lightblue;
-    /*border-top: 1px double black;
-    border-bottom: 1px double black;*/
+    background: rgb(224, 224, 209);
+    border-top: 1px double black;
+    border-bottom: 1px double black;
     padding-left:  130px;
     font-size:  1.2em;
   }
 
 li {
-  display: inline-block;
-  /*border-right-style: solid;
-  border-right-width: 1px;
-  border-right-color: black;*/
-  padding:  6px 3px;
-  height: 100%;
+    display: inline-block;
+    /*border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: black;*/
+    padding:  6px 3px;
+    height: 100%;
 }
 
 li a {
-  text-decoration: none;
-  padding: 3px 3px;
-  color: blue; 
-  width: 100%;
+    text-decoration: none;
+    padding: 3px 3px;
+    color: blue; 
+    width: 100%;
 }
 
 a:hover {
-    background-color: lightgray;
+    background-color: rgb(178, 36, 0);
     color: white;
 }
 
 body {
-  width: 100%;
-  margin: 0px;
+    width: 100%;
+    margin: 0px;
 }
 
 iframe {
-  position: relative;
-  top: 195px;
-  display:  block;
-  width:  94%;  
-  height: 1900px;
-  margin-right: 3%;
-  margin-left: 3%;
-  overflow: hidden;
+    position: relative;
+    top: 195px;
+    display:  block;
+    width:  94%;  
+    height: 1900px;
+    margin-right: 3%;
+    margin-left: 3%;
+    overflow: hidden;
 }
 
 
 /*------------------media queries------------------*/
 
 @media (max-width:  2000px) {
-  iframe {
-    height: 1800px;
-  }
+    iframe {
+        height: 1800px;
+    }
 }
 
 @media (max-width:  1800px) {
-  iframe {
-    height: 1600px;
-  }
+    iframe {
+        height: 1600px;
+    }
 }
 
 @media (max-width:  1600px) {
-  iframe {
-    height: 1400px;
-  }
+    iframe {
+        height: 1400px;
+    }
 }
 
 @media (max-width:  1400px) {
-  iframe {
-    height: 1200px;
-  }
+    iframe {
+        height: 1200px;
+    }
 }
 
 @media (max-width:  1200px) {
-  iframe {
-    height: 1000px;
-  }
+    iframe {
+        height: 1000px;
+    }
 }
 
 @media (max-width:  1000px) {
-  iframe {
-    height: 800px;
-  }
+    iframe {
+        height: 800px;
+    }
 }
 
 @media (max-width:  1000px) {
-  #header_text {
-    font-size: 0.8em;
-  }
-  #nav_container {
-    font-size:  0.8em;
-  }
+    #header_text {
+        font-size: 0.8em;
+    }
+    #nav_container {
+        font-size:  0.8em;
+    }
+}
+
+@media (max-width:  800px) {
+    iframe {
+        height: 600px;
+    }
 }
 
 @media (max-width:  675px) {
-  #header_text {
-    font-size: 0.6em;
-  }
-  iframe {
-    top: 170px;
-  }
+    #header_text {
+        font-size: 0.6em;
+        height: 100px;  /*new.............................*/
+    }
+    #upper_bar {  /*new.............................*/
+        height: 100px;
+    }
+    iframe {
+        top: 145px;
+        height: 400px;
+     }
+     #header_image {
+          height: 80px;
+          width: 80px;
+          padding: 10px 15px 10px 10px;
+     }
+     #header_text {
+          margin-right: 15px;
+     }
 }
 
 @media (max-width:  415px) {
-  iframe {
-   height: 400px;
-  }
-  #nav_container {
-    padding-left: 30px;
-  }
+    iframe {
+        height: 400px;
+    }
+    #nav_container {
+        padding-left: 30px;
+    }
 }
 
 @media (max-width:  325px) {
-   iframe {
-    height: 300px;
-  }
+    iframe {
+        height: 300px;
+    }
 }
 
