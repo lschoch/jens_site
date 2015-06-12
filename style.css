@@ -1,9 +1,14 @@
+
 header {
     position: fixed;
     top: 0px;
     left: 0px;
     width: 100%;
     z-index:  1;
+}
+
+.calendar {
+    position: fixed;
 }
 
 #upper_bar {
@@ -36,7 +41,7 @@ header {
 }
 
 #nav_container {
-    clear: left;
+    clear: both;
     width: 100%;
     list-style-type: none;
     margin-top: 0px;
@@ -48,30 +53,81 @@ header {
     font-size:  1.2em;
   }
 
-li {
+#nav_container li {
     display: inline-block;
-    /*border-right-style: solid;
-    border-right-width: 1px;
-    border-right-color: black;*/
     padding:  6px 3px;
     height: 100%;
 }
 
-li a {
+#nav_container li a {
     text-decoration: none;
     padding: 3px 3px;
     color: blue; 
     width: 100%;
 }
 
-a:hover {
+#nav_container a:hover {
     background-color: rgb(178, 36, 0);
     color: white;
 }
 
-body {
+html, body {
     width: 100%;
+    height: 100%;
     margin: 0px;
+}
+
+.tab {
+    margin-left: 5px;
+}
+
+#vert_nav_bar {
+    float: left;
+    position: relative;
+    top: 175px;
+    margin: 0px 15px 15px 15px;
+    width: 130px;
+    border: 1px solid black;
+    background: rgb(224, 224, 209);    
+    vertical-align:  middle;
+}
+
+#side_nav {
+    padding: 10px;
+    margin: 0px;
+}
+
+#side_nav  li {
+    display: block;
+    padding: 0px;
+}
+
+#side_nav a {
+    text-decoration: none;
+    padding: 1px ;
+    color: blue; 
+    width: 100%;
+}
+
+#side_nav a:hover {
+    background-color: rgb(178, 36, 0);
+    color: white;
+}
+
+#text_container {
+    position: relative;
+    top: 175px;
+    margin-left: 15px;
+    text-align: left;
+}
+
+#teacher_img  {
+    float: right;
+    position: relative;
+    top: 175px;
+    padding:  0px  15px 15px 15px;
+    width: 200px;
+    height: 200px;
 }
 
 iframe {
@@ -131,6 +187,13 @@ iframe {
     #nav_container {
         font-size:  0.8em;
     }
+     #side_nav {
+        font-size:  0.8em;
+    }
+    #teacher_img {
+        height: 100px;
+        width: 100px;
+    }
 }
 
 @media (max-width:  800px) {
@@ -146,6 +209,15 @@ iframe {
     }
     #upper_bar {  /*new.............................*/
         height: 100px;
+    }
+    #vert_nav_bar {
+        top: 140px;
+    }
+    #text_container {
+        top: 140px;
+    }
+    #teacher_img {
+        top: 140px;
     }
     iframe {
         top: 145px;
