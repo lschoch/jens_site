@@ -4,7 +4,7 @@ header {
     top: 0px;
     left: 0px;
     width: 100%;
-    z-index:  1;
+    z-index:  200;
 }
 
 .calendar {
@@ -84,13 +84,14 @@ html, body {
 #vert_nav_bar {
     float: left;
     position: relative;
-    top: 175px;
+    top: 165px;
     margin: 0px 15px 15px 15px;
     width: 130px;
     border: 1px solid black;
     background: rgb(224, 224, 209);    
     vertical-align:  middle;
     z-index: 100;
+    overflow: hidden;
 }
 
 #vert_ul {
@@ -118,18 +119,53 @@ html, body {
 
 #text_container {
     position: relative;
-    top: 175px;
-    margin-left: 15px;
+    top: 165px;
+    margin-left: 10px;
     text-align: left;
 }
 
-#teacher_img  {
+p {
+    margin-right: 10px;
+    margin-bottom: 0px;
+}
+
+#text_img  {
     float: right;
     position: relative;
-    top: 175px;
-    padding:  0px  15px 15px 15px;
-    width: 200px;
-    height: 200px;
+    top: 165px;
+    margin:  10px  15px 15px 15px;
+    width: 220px;
+    height: 160px;
+    border: 1px solid black;
+}
+
+footer {
+    /*clear: both;*/
+    position: relative;
+    top: 190px;
+    width: 100%;
+    background: #fff;
+    text-align: center;
+}
+
+#footer_img {
+    width: 274px;
+    height: 184px;
+    margin: 10px 0px 15px 0px;
+}
+
+#cal_footer {
+    position: relative;
+    top: 190px;
+    width: 100%;
+    background: #fff;
+    text-align: center;
+}
+
+#cal_footer_img {
+    width: 486px;
+    height: 180px;
+    margin: 20px 0px 15px;
 }
 
 iframe {
@@ -192,9 +228,26 @@ iframe {
      #vert_ul {
         font-size:  0.8em;
     }
-    #teacher_img {
-        height: 100px;
-        width: 100px;
+    #text_img {
+        width: 110px;
+        height: 80px;
+    }
+
+    footer {
+        top: 180px;
+    }
+    #footer_img {
+    width: 137px;
+    height: 92px;
+    margin: 0px 0px 0px 0px;
+    }
+    #cal_footer {
+        top: 180px;
+    }
+    #cal_footer_img {
+    width: 183px;
+    height: 90px;
+    margin: 0px 0px 0px 0px;
     }
 }
 
@@ -218,7 +271,7 @@ iframe {
     #text_container {
         top: 140px;
     }
-    #teacher_img {
+    #text_img {
         top: 140px;
     }
     iframe {
