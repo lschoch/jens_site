@@ -140,18 +140,27 @@ p {
 }
 
 footer {
-    /*clear: both;*/
+    clear: both;
     position: relative;
     top: 190px;
     width: 100%;
     background: #fff;
     text-align: center;
+    height: 184px;
 }
 
 #footer_img {
     width: 274px;
     height: 184px;
-    margin: 10px 0px 15px 0px;
+    margin: 0px 0px 15px 0px;
+}
+
+#logo_div {
+    text-align: center;
+    position: relative;
+    top: 200px;
+    height: 140;
+    margin-top: 15px;
 }
 
 #cal_footer {
@@ -163,8 +172,8 @@ footer {
 }
 
 #cal_footer_img {
-    width: 486px;
-    height: 180px;
+    width: 364px;
+    height: 135px;
     margin: 20px 0px 15px;
 }
 
@@ -232,20 +241,24 @@ iframe {
         width: 110px;
         height: 80px;
     }
-
     footer {
         top: 180px;
+        height: 92px;
     }
     #footer_img {
     width: 137px;
     height: 92px;
     margin: 0px 0px 0px 0px;
     }
+    #logo_div {
+        top: 190px;
+        margin-bottom: 20px;
+    }
     #cal_footer {
         top: 180px;
     }
     #cal_footer_img {
-    width: 183px;
+    width: 182px;
     height: 90px;
     margin: 0px 0px 0px 0px;
     }
