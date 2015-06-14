@@ -39,3 +39,4 @@ Thumbs.db
 # Sublime files#
 ######################
 *.Sublime*
+/ignore
