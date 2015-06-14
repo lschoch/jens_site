@@ -1,3 +1,10 @@
+.tab5 {
+    margin-left: 5px;
+}
+
+.tab10 {
+    margin-left: 20px;
+}
 
 header {
     position: fixed;
@@ -75,10 +82,6 @@ html, body {
     width: 100%;
     height: 100%;
     margin: 0px;
-}
-
-.tab {
-    margin-left: 5px;
 }
 
 #vert_nav_bar {
@@ -201,8 +204,29 @@ iframe {
     overflow: hidden;
 }
 
+/************************************************/
+/*------------------register---------------------------*/
+/************************************************/
 
+.form_block {
+    background: rgb(224, 224, 209);  
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius:  5px;
+    margin-bottom: 20px;
+}
+
+.ctr {
+    text-align: center;
+}
+
+#reg_title {
+    display: inline-block;
+}
+
+/************************************************/
 /*------------------media queries------------------*/
+/************************************************/
 
 @media (max-width:  2000px) {
     iframe {
@@ -311,6 +335,10 @@ iframe {
     #cal_logo_img {
         height: 35px;
         width: 69px;
+    }
+    #reg_title {
+        font-size: 1.5em;
+        text-align: center;
     }
 }
 
