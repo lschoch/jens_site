@@ -220,6 +220,13 @@ iframe {
     text-align: center;
 }
 
+#sub {
+    padding: 4px 6px;
+    border-radius: 4px;
+    background: rgb(81,180, 208);
+    color: white;
+}
+
 /************************************************/
 /*------------------media queries------------------*/
 /************************************************/
@@ -266,8 +273,11 @@ iframe {
         height: 450px;
      }
     #header_text {
-        font-size: 0.6em;
+        font-size: 0.7em;
         height: 100px; 
+    }
+    p {
+        font-size: 0.8em;
     }
     #upper_bar { 
         height: 100px;
