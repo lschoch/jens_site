@@ -13,13 +13,10 @@
     margin-bottom: 20px;
 }
 
-/*.ctr {
-    text-align: center;
-}*/
-
-/*#sub {
-    padding: 4px 6px;
-    border-radius: 4px;
-    background: #5bc0de;
-    color: white;
-}*/
+/*.embed-responsive,
+.embed-responsive-4by3,
+.embed-responsive-item {
+    width: 533px;
+    height: 400px;
+    margin: auto;
+    }*/
