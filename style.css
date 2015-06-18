@@ -13,6 +13,9 @@
     margin-bottom: 20px;
 }
 
+/*-----------------media queries---------------*/
+/*********************************************/
+
 /*.embed-responsive,
 .embed-responsive-4by3,
 .embed-responsive-item {
@@ -20,3 +23,23 @@
     height: 400px;
     margin: auto;
     }*/
+
+@media (max-width:  767px) {
+    .page-header > .nav > li > a {
+    padding: 5px 5px;
+    }
+    .page-header {
+        padding-bottom: 9px;
+        margin: 20px 0 10px;
+        border-bottom: 1px solid #eee;
+    }
+    .page-header > h3 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width:  480px) {
+    .page-header > h3 {
+        clear: both;
+    }
+}
