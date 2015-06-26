@@ -8,6 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="../../assets/js/html5shiv.js"></script>
@@ -18,13 +19,7 @@
 <body>
 
 <div class="container">
-  <!-- <br>
-  <p>
-    <a href="index.html" class="btn btn-info btn-md">
-      <span class="glyphicon glyphicon-arrow-left"></span> Back
-    </a>
-  </p>  -->
-  <header class="page-header">
+ <header class="page-header">
     <ul class="nav nav-pills pull-right">
       <li><a href="index.html">Home</a></li>
       <!-- <li><a href="profile.html">Profile</a></li> -->
@@ -35,42 +30,43 @@
   </header>
   <h4>Student Profile</h4>
   <br>
-  <!-- <p>Note: be sure to scroll all the way down for the <span  id="sub">Submit</span> button.</p> -->
-  <div class="form-group">
-    <button type="submit" value="Send" class="btn btn-info" id="submit">Submit</button> 
-  </div> 
-  <br>   
-  <form role="form">
+ <!-- <div class="form-group">
+    <button type="submit" value="Send" class="btn btn-info" id="submit1">Submit</button> 
+  </div>  -->
+  <!-- <br>    -->
+  <form action="profile.php" method="post" role="form">
+    <input type="submit" class="btn btn-info"></input>
+    <br><br>
     <div class="form_block">
       <div class="form-group">
-        <label for="first">First name:</label>
-        <input type="text" class="form-control" id="first" placeholder="Enter first name">
+        <label for="first">First name</label>
+        <input type="text" class="form-control" id="first" name="first" placeholder="Enter first name">
       </div>
       <div class="form-group">
-        <label for="last">Last name:</label>
-        <input type="text" class="form-control" id="last" placeholder="Enter last name">
+        <label for="last">Last name</label>
+        <input type="text" class="form-control" id="last" name="last" placeholder="Enter last name">
       </div>
-      <label>Telephone:</label>
+      <label>Telephone</label>
       <div class="form-group tab10">
-        <label for="homtel">Home:</label>
-        <input type="tel" class="form-control" id="homtel" placeholder="Enter home telephone number">
+        <label for="homtel">Home</label>
+        <input type="tel" class="form-control" id="homtel" name="homtel" placeholder="Enter home telephone number">
       </div>
       <div class="form-group tab10">
-        <label for="mobtel">Mobile:</label>
-        <input type="tel" class="form-control" id="mobtel" placeholder="Enter mobile telephone number">
+        <label for="mobtel">Mobile</label>
+        <input type="tel" class="form-control" id="mobtel" name="mobtel" placeholder="Enter mobile telephone number">
       </div>
       <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter email address">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">
       </div>
     </div>
       <!-- <br> -->
       <div class="form_block">
-        <h4>Class schedule:</h4>
+        <h4>Class schedule</h4>
         <div class="tab10">
           <div class="form-group">
-            <label for="per1">First period:</label>
-            <select class="form-control" id="per1">
+            <label for="per1">First period</label>
+            <select class="form-control" id="per1" name = "per1">
               <option>Select</option>
               <option>Advanced Modeling</option>
               <option>Art</option>
@@ -88,8 +84,8 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="per2">Second period:</label>
-            <select class="form-control" id="per2">
+            <label for="per2">Second period</label>
+            <select class="form-control" id="per2" name="per2">
               <option>Select</option>
               <option>Advanced Modeling</option>
               <option>Art</option>
@@ -107,8 +103,8 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="per3">Third period:</label>
-            <select class="form-control" id="per3">
+            <label for="per3">Third period</label>
+            <select class="form-control" id="per3" name="per3">
               <option>Select</option>
               <option>Advanced Modeling</option>
               <option>Art</option>
@@ -126,8 +122,8 @@
             </select>
           </div>
           <div class="form-group">        
-            <label for="per4">Fourth period:</label>
-            <select class="form-control" id="per4">
+            <label for="per4">Fourth period</label>
+            <select class="form-control" id="per4" name="per4">
               <option>Select</option>
               <option>Advanced Modeling</option>
               <option>Art</option>
@@ -145,8 +141,8 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="per5">Fifth period:</label>
-            <select class="form-control" id="per5">
+            <label for="per5">Fifth period</label>
+            <select class="form-control" id="per5" name="per5">
              <option>Select</option>
               <option>Advanced Modeling</option>
               <option>Art</option>
@@ -164,8 +160,8 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="per6">Sixth period:</label>
-            <select class="form-control" id="per6">
+            <label for="per6">Sixth period</label>
+            <select class="form-control" id="per6" name="per6">
               <option>Select</option>
               <option>Advanced Modeling</option>
               <option>Art</option>
@@ -183,8 +179,8 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="per7">Seventh period:</label>
-            <select class="form-control" id="per7">
+            <label for="per7">Seventh period</label>
+            <select class="form-control" id="per7" name="per7">
              <option>Select</option>
               <option>Advanced Modeling</option>
               <option>Art</option>
@@ -205,15 +201,8 @@
       </div>
       <!-- <br> -->
       <div class="form-group">
-        <button type="submit" value="Send" class="btn btn-info" id="submit">Submit</button> 
+        <button type="submit" value="Send" class="btn btn-info" id="submit2">Submit</button> 
       </div> 
-     <!--  <br> -->
-      <!-- <p>
-        <a href="index.html" class="btn btn-info btn-md">
-        <span class="glyphicon glyphicon-arrow-left" ></span> Back
-        </a>
-      </p> 
-      <br> -->    
   </form>
 
 </div>
