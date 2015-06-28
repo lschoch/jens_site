@@ -1,5 +1,14 @@
-#foot {
+/*#foot {
     text-align: center;
+}*/
+.tab10 {
+    margin-left: 10px;
+}
+.reset_btn {
+    margin-left: 20px;
+}
+#profile_alert {
+    display:  inline-block;
 }
 
 /*-----------------profile--------------------------*/
