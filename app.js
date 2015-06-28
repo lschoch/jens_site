@@ -14,8 +14,7 @@ $(document).ready(function() {
 // 	});
 
 $('.reset_btn').click(function() {
-	//console.log("reset button clicked");
-    	$('#profile_form')[0].reset();
+	$('#profile_form').get(0).reset(); //clear form data when reset button is clicked
     });
 });
 
