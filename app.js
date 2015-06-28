@@ -18,3 +18,7 @@ $('.reset_btn').click(function() {
     	$('#profile_form')[0].reset();
     });
 });
+
+$(window).load(function() {
+    $('#profile_form').get(0).reset(); //clear form data on page load
+});
