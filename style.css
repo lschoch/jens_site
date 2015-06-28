@@ -1,6 +1,3 @@
-/*#foot {
-    text-align: center;
-}*/
 .tab10 {
     margin-left: 10px;
 }
@@ -17,7 +14,6 @@
 .form_block {
     background: #eee;  
     padding: 5px 10px;
-    /*border: 1px solid black;*/
     border-radius:  5px;
     margin-bottom: 20px;
 }
