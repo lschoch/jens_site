@@ -184,9 +184,3 @@ include("inc/header.php");
 <?php 
     include("inc/footer.php"); 
 ?>
-<script>
-$(window).load(function(){
-    $('#profile_form').get(0).reset(); //clear form data when browser back button is pressed
-});
-</script>
-
