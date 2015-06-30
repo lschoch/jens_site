@@ -6,7 +6,7 @@ include("inc/header.php");
 
     <h4>Student Profile</h4>
     <br>
-    <form  id="profile_form" action="profile_process.php?submit=true" method="post" role="form">
+    <form  id="profile_form" action="profile_process.php" method="post" role="form">
         <!-- <br><br> -->
         <div class="form-group">
                 <input type="submit" class="btn btn-info"></input>
@@ -184,3 +184,9 @@ include("inc/header.php");
 <?php 
     include("inc/footer.php"); 
 ?>
+<script>
+$(window).load(function(){
+    $('#profile_form').get(0).reset(); //clear form data when browser back button is pressed
+});
+</script>
+

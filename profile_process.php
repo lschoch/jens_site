@@ -1,6 +1,7 @@
 <?php 
-$file = "profiles.txt";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $file = "profiles.txt";
     $first = $_POST["first"];
     $last = $_POST["last"];
     $homtel = $_POST["homtel"];
@@ -27,6 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $data = $data.$per6.",";
     $data = $data.$per7."\n";
     file_put_contents($file, $data,  FILE_APPEND | LOCK_EX);
+    //console.log("+++++++++++++");
     header("Location: form_response.php");
     exit;
 }
