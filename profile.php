@@ -12,7 +12,11 @@ include("inc/header.php");
                 <input type="submit" class="btn btn-info"></input>
                 <input type="reset"  value="Reset" class="btn btn-info reset_btn" ></input>
         </div>
-        <div class="form_block">  
+        <div class="form_block">
+            <div class="form-group">
+                <label for="student_id">Student ID</label>
+                <input type="text" class="form-control" id="student_id" name="student_id" placeholder="Enter Student ID">
+            </div>  
             <div class="form-group">
                 <label for="first">First name</label>
                 <input type="text" class="form-control" id="first" name="first" placeholder="Enter first name">
