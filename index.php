@@ -8,7 +8,8 @@ include("inc/header.php");
         <h1>Dual Credit English</h1>
         <p class="lead">
           <blockquote>
-            <p>In this course we will be......  Please click the <a href="profile.html">Profile</a> link to provide me with some basic information about yourself and please monitor the class calendar to stay informed regarding assignments and due dates.</p><small><cite>Mrs. Schoch</small></cite>
+            <p>In this course we will be......  Please click the <a href="profile.php">Profile</a> link to provide me with some basic information about yourself and please monitor the 
+              class calendar to stay informed regarding assignments and due dates.</p><small><cite>Mrs. Schoch</small></cite>
           </blockquote>
         </p>
         <h4>Google links:</h4>

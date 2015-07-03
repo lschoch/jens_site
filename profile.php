@@ -5,6 +5,7 @@ include("inc/header.php");
 ?>
 
     <h4>Student Profile</h4>
+    <h5>Enter your Student ID to begin.</h5>
     <br>
     <form  id="profile_form" action="profile_process.php" method="post" role="form">
         <!-- <br><br> -->
