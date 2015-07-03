@@ -20,6 +20,8 @@ include("inc/header.php");
           <a class="btn btn-info btn-sm" href="#" >Drive</a>
         </p> 
       </div>
+
+      <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
       
   <?php
   include("inc/footer.php");

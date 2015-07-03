@@ -186,6 +186,9 @@ include("inc/header.php");
     </form>
 <br>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="app.js"></script>
+
 <?php 
     include("inc/footer.php"); 
 ?>
