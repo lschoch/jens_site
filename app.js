@@ -1,18 +1,44 @@
 $(document).ready(function() {
-	$_path = $(location).attr('pathname');	
-	
-	//reset profile_form if it is the profile.php page that is  being loaded  (ie, when the browser back button is clicked)	
-	if($_path == '/jens_site/profile.php') {
+	$_path = $(location).attr('pathname');
+
+	//reset profile_form, disable all buttons except  student_id,  reenable after student_id has been entered and the form populated with archived data, if any
+	function  startOver() {
+		//reset profile_form
 		$('#profile_form').get(0).reset(); 
-		//disable all buttons except  student_id,  renable after student_id has been entered and the form populated with archived data, if any
+		// disable all buttons (including student_id)
 		$('input, select, button, submit').each(function(){
-   			var $input = $(this);			   			
-   			$input.attr('disabled', 'disabled');
+				var $input = $(this);			   			
+				$input.attr('disabled', 'disabled');
+		});
+		//enable the student id button and give it focus
+		$('#student_id').removeAttr('disabled');
+		$('#student_id').focus();	
+	}
+
+	function confirmExit() {
+		if (formmodified == 1) {
+		return "New information has not been saved.";
+		}
+	}
+
+	if($_path == '/jens_site/profile.php') {  // code specific to the profile.php document
+		formmodified=0; //reset formmodified when the document is loaded
+		startOver(); // reset profile_form and disable all buttons except student id
+
+		$('form *').change(function(){ // set flag that form has been modified
+			formmodified=1;
 		});
 
-		$('#student_id').removeAttr('disabled');
-		$('#student_id').focus();
+		window.onbeforeunload = confirmExit;
+		
+		$('#submit').click(function() {
+			formmodified = 0; // reset formmodified after the submit button is clicked (ie, changes have been sent, OK to navigate to another page without confirmExit)
+		});
 	}
+
+	$('#reset1, #reset2').click(function() {
+		startOver(); // reset profile_form and disable all buttons except student id
+	});
 
 	//load data from students.json file corresponding to student_id
 	$('#student_id').change(function() {
@@ -35,21 +61,21 @@ $(document).ready(function() {
 			   		$('#per6').val(value.per6);
 			   		$('#per7').val(value.per7);
 
-			   		found =true; // id found in students.json, a valid id was entered
+			   		found =true; // the input id was found in students.json, a valid id was entered
+
+			   		// reenable buttons, inputs, selects after input of valid id and populating form data from students.json file
+					$('input, select, button, submit').each(function(){
+							var $input = $(this);			   			
+							$input.removeAttr('disabled');
+					});
 			   		return(false);
 			   	}
 		   	} );
 		   	if(!found) {
 		   		alert("Sorry, that is not a valid Student ID. \nPlease recheck your Student ID and try again.");
-		   		$('#student_id').val('');
-		   		$('#student_id').focus(); // start over with valid id
-		   	}	 
-		});
-		
-		// reenable buttons, inputs, selects after input of valid id and populating form data from students.json file
-		$('input, select, button, submit').each(function(){
-				var $input = $(this);			   			
-				$input.removeAttr('disabled');
+		   		$('#student_id').val(' ');
+		   		startOver(); // reset profile_form and disable all buttons except student id
+		   	} 
 		});
 	});
 	
@@ -66,4 +92,5 @@ $(document).ready(function() {
 	            return false;   
 	        }
     	});
+
 });
