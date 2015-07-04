@@ -1,12 +1,17 @@
 <?php
-$title = "Dual Cred Eng : resources";
-$exclude = "resources";
-include("inc/header.php");
+    $title = "Dual Cred Eng : resources";
+    include("inc/header.php");
 ?>
 
-<h4>Resources</h4>
-<br>
+<body>
+    <div class="container">
+        <h4>Resources</h4>
+        <br>
    
 <?php
-  include("inc/footer.php");
-  ?>
+    include("inc/footer.php");
+?>
+
+<script>
+    $('#resources').addClass('active');
+</script>

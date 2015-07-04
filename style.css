@@ -7,7 +7,21 @@
 #profile_alert {
     display:  inline-block;
 }
+
+/*back button on profile response page*/
 .back {
+    text-align: center;
+}
+
+body {
+    padding-top: 70px;
+}
+
+.container {
+    max-width: 1000px;
+}
+
+.jumbotron, .center{
     text-align: center;
 }
 
