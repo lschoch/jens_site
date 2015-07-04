@@ -10,8 +10,8 @@ include("inc/header.php");
     <form  id="profile_form" action="profile_process.php" method="post" role="form">
         <!-- <br><br> -->
         <div class="form-group">
-                <input type="submit" class="btn btn-info"></input>
-                <input type="reset"  value="Reset" class="btn btn-info reset_btn" ></input>
+                <input type="submit" id="submit" class="btn btn-info"></input>
+                <input type="button"  value="Reset" id="reset1" class="btn btn-info reset_btn" ></input>
         </div>
         <div class="form_block">
             <div class="form-group">
@@ -181,12 +181,11 @@ include("inc/header.php");
         </div><!-- end form-block -->
         <div class="form-group">
                 <input type="submit" class="btn btn-info"></input>
-                <input type="reset" value="Reset" class="btn btn-info reset_btn" ></input>
+                <input type="button" value="Reset" id='reset2' class="btn btn-info reset_btn" ></input>
         </div>
     </form>
 <br>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="app.js"></script>
 
 <?php 
