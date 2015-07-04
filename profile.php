@@ -186,7 +186,7 @@ include("inc/header.php");
     </form>
 <br>
 
-<script src="app.js"></script>
+<script src="app.min.js"></script>
 
 <?php 
     include("inc/footer.php"); 
