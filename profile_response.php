@@ -20,6 +20,6 @@ include("inc/footer.php");
 
 <script>
 function goBack() {
-    window.history.back();
+    window.location.replace("profile.php");
 }
 </script>
