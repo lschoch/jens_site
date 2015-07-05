@@ -6,15 +6,19 @@ include("inc/header.php");
 <body>
     <div class="container">
         <div class="center">
-        <h4>Student Profile</h4>
-        <h5>Enter your Student ID to begin.</h5>
+        <h3>Student Profile</h3>
+        <h4>Enter your Student ID to begin.</h4>
         </div>
         <br>
         <form  id="profile_form" action="profile_process.php" method="post" role="form">
             <!-- <br><br> -->
             <div class="form-group center">
-                    <input type="submit" id="submit" class="btn btn-info"></input>
-                    <input type="button"  value="Reset" id="reset1" class="btn btn-info reset_btn" ></input>
+                    <input type="submit" id="submit" class="btn btn-info submit"></input>
+                    <input type="button"  value="Reset" class="btn btn-info reset_btn" ></input>
+                    <!-- <input type="button" id="request_ID" class="btn btn-info" data-toggle="modal" href="#request_ID" value="Request ID"></input> -->
+                    <label for "request" id="request_label">Need an ID?</label>
+                    <button type="button" class="btn btn-info" data-toggle="modal" data-target="#request_ID" id="request">Request ID</button>
+                    <!-- <a class="btn btn-info" id="request" data-toggle="modal" href="#request_ID">Request ID</a> -->
             </div>
             <div class="form_block">
                 <div class="form-group">
@@ -183,8 +187,8 @@ include("inc/header.php");
                 </div><!-- end class="tab10" -->
             </div><!-- end form-block -->
             <div class="form-group center">
-                <input type="submit" class="btn btn-info"></input>
-                <input type="button" value="Reset" id='reset2' class="btn btn-info reset_btn" ></input>
+                <input type="submit" class="btn btn-info submit"></input>
+                <input type="button" value="Reset" class="btn btn-info reset_btn" ></input>
             </div>
         </form>
     <br>
@@ -192,6 +196,30 @@ include("inc/header.php");
 <?php 
     include("inc/footer.php"); 
 ?>
+
+<!-- Modal -->
+    <div class="modal fade" id="request_ID">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Your Student ID will be sent to you in an email.<br>Your ID is private. Please do not share it with others.</h4>
+          </div>
+          <div class="modal-body">
+            <form class="form-inline">
+              <div class="form-group">
+                <label class="sr-only" for="email">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Email">
+              </div>
+              <button type="submit" class="btn btn-primary" data-dismiss="modal">Send my Student ID</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- End Modal -->
 
 <script src="app.min.js"></script>
 <script>
