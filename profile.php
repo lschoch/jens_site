@@ -10,14 +10,14 @@ include("inc/header.php");
         <h4>Enter your Student ID to begin.</h4>
         </div>
         <br>
-        <form  id="profile_form" action="profile_process.php" method="post" role="form">
+        <form  id="profile_form" action="profile_process.php" method="post" role="form" class="form-inline">
             <!-- <br><br> -->
             <div class="form-group center">
                     <input type="submit" id="submit" class="btn btn-info submit"></input>
                     <input type="button"  value="Reset" class="btn btn-info reset_btn" ></input>
                     <label for "request" id="request_label">Need an ID?  </label>                    
                     <button type="button" class="btn btn-info" data-toggle="modal" data-target="#request_ID" id="request">Request ID</button>
-            </div>
+            </div><br>
             <div class="form_block">
                 <div class="form-group">
                     <label for="student_id">Student ID</label>
@@ -31,6 +31,8 @@ include("inc/header.php");
                     <label for="last">Last name</label>
                     <input type="text" class="form-control disable" id="last" name="last" placeholder="Enter last name">
                 </div>
+            </div>
+            <div class="form_block">
                 <label>Telephone</label>
                 <div class="form-group tab10">
                     <label for="homtel">Home</label>
@@ -191,10 +193,6 @@ include("inc/header.php");
         </form>
     <br>
 
-<?php 
-    include("inc/footer.php"); 
-?>
-
 <!-- Modal -->
 <div  id="request_ID" class="modal fade"  role="dialog" aria-hidden="true">
     <div class="modal-dialog">
@@ -225,3 +223,7 @@ include("inc/header.php");
         $('#profile').addClass('active');
     });
 </script>
+
+<?php 
+    include("inc/footer.php"); 
+?>

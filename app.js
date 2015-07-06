@@ -82,10 +82,9 @@ $(document).ready(function() {
 	        var enterOkClass =  $(this).attr('class');
 	        if (event.which == 13 && enterOkClass != 'enterSubmit' ) {  // add  'enterSubmit' class to any button for which submit on  enter should not be disabled
 	            event.preventDefault();
-	            //$('#student_id').blur();
 	            $('input, select, button, submit').each(function(){
-   			var $input = $(this);			   			
-   			$input.blur();
+   			var prof_input = $(this);			   			
+   			prof_input.blur();
 		});
 	            return false;   
 	        }
