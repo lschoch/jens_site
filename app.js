@@ -5,14 +5,12 @@ $(document).ready(function() {
 	function  startOver() {
 		//reset profile_form
 		$('#profile_form').get(0).reset(); 
-		// disable all buttons (including student_id)
-		$('input, select, button, submit').each(function(){
-				var $input = $(this);			   			
-				$input.attr('disabled', 'disabled');
+		// disable selected form buttons until valid student  ID has been entered
+		$('.submit, .reset_btn, .disable').each(function(){
+				var prof_input = $(this);			   			
+				prof_input.attr('disabled', 'disabled');
 		});
-		//enable the student id button and give it focus
-		$('#student_id').removeAttr('disabled');
-		$('#student_id').focus();	
+		$('#student_id').focus();
 	}
 
 	function confirmExit() {
@@ -36,7 +34,7 @@ $(document).ready(function() {
 		});
 	}
 
-	$('#reset1, #reset2').click(function() {
+	$('.reset_btn').click(function() {
 		startOver(); // reset profile_form and disable all buttons except student id
 	});
 
@@ -92,5 +90,4 @@ $(document).ready(function() {
 	            return false;   
 	        }
     	});
-
 });

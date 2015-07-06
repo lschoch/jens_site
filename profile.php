@@ -15,10 +15,8 @@ include("inc/header.php");
             <div class="form-group center">
                     <input type="submit" id="submit" class="btn btn-info submit"></input>
                     <input type="button"  value="Reset" class="btn btn-info reset_btn" ></input>
-                    <!-- <input type="button" id="request_ID" class="btn btn-info" data-toggle="modal" href="#request_ID" value="Request ID"></input> -->
-                    <label for "request" id="request_label">Need an ID?</label>
+                    <label for "request" id="request_label">Need an ID?  </label>                    
                     <button type="button" class="btn btn-info" data-toggle="modal" data-target="#request_ID" id="request">Request ID</button>
-                    <!-- <a class="btn btn-info" id="request" data-toggle="modal" href="#request_ID">Request ID</a> -->
             </div>
             <div class="form_block">
                 <div class="form-group">
@@ -27,24 +25,24 @@ include("inc/header.php");
                 </div>  
                 <div class="form-group">
                     <label for="first">First name</label>
-                    <input type="text" class="form-control" id="first" name="first" placeholder="Enter first name">
+                    <input type="text" class="form-control disable" id="first" name="first" placeholder="Enter first name">
                 </div>
                 <div class="form-group">
                     <label for="last">Last name</label>
-                    <input type="text" class="form-control" id="last" name="last" placeholder="Enter last name">
+                    <input type="text" class="form-control disable" id="last" name="last" placeholder="Enter last name">
                 </div>
                 <label>Telephone</label>
                 <div class="form-group tab10">
                     <label for="homtel">Home</label>
-                    <input type="tel" class="form-control" id="homtel" name="homtel" placeholder="Enter home telephone number">
+                    <input type="tel" class="form-control disable" id="homtel" name="homtel" placeholder="Enter home telephone number">
                 </div>
                 <div class="form-group tab10">
                     <label for="mobtel">Mobile</label>
-                    <input type="tel" class="form-control" id="mobtel" name="mobtel" placeholder="Enter mobile telephone number">
+                    <input type="tel" class="form-control disable" id="mobtel" name="mobtel" placeholder="Enter mobile telephone number">
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">
+                    <input type="email" class="form-control disable" id="email" name="email" placeholder="Enter email address">
                 </div>
             </div><!-- end form-block -->
         <!-- <br> -->
@@ -53,7 +51,7 @@ include("inc/header.php");
                 <div class="tab10">
                     <div class="form-group">
                         <label for="per1">First period</label>
-                        <select class="form-control" id="per1" name = "per1">
+                        <select class="form-control disable" id="per1" name = "per1">
                             <option>Select</option>
                             <option>Advanced Modeling</option>
                             <option>Art</option>
@@ -72,7 +70,7 @@ include("inc/header.php");
                     </div>
                     <div class="form-group">
                         <label for="per2">Second period</label>
-                        <select class="form-control" id="per2" name="per2">
+                        <select class="form-control disable" id="per2" name="per2">
                             <option>Select</option>
                             <option>Advanced Modeling</option>
                             <option>Art</option>
@@ -91,7 +89,7 @@ include("inc/header.php");
                     </div>
                     <div class="form-group">
                         <label for="per3">Third period</label>
-                        <select class="form-control" id="per3" name="per3">
+                        <select class="form-control disable" id="per3" name="per3">
                             <option>Select</option>
                             <option>Advanced Modeling</option>
                             <option>Art</option>
@@ -110,7 +108,7 @@ include("inc/header.php");
                     </div>
                     <div class="form-group">        
                         <label for="per4">Fourth period</label>
-                        <select class="form-control" id="per4" name="per4">
+                        <select class="form-control disable" id="per4" name="per4">
                             <option>Select</option>
                             <option>Advanced Modeling</option>
                             <option>Art</option>
@@ -129,7 +127,7 @@ include("inc/header.php");
                     </div>
                     <div class="form-group">
                         <label for="per5">Fifth period</label>
-                        <select class="form-control" id="per5" name="per5">
+                        <select class="form-control disable" id="per5" name="per5">
                             <option>Select</option>
                             <option>Advanced Modeling</option>
                             <option>Art</option>
@@ -148,7 +146,7 @@ include("inc/header.php");
                     </div>
                     <div class="form-group">
                         <label for="per6">Sixth period</label>
-                        <select class="form-control" id="per6" name="per6">
+                        <select class="form-control disable" id="per6" name="per6">
                             <option>Select</option>
                             <option>Advanced Modeling</option>
                             <option>Art</option>
@@ -167,7 +165,7 @@ include("inc/header.php");
                     </div>
                     <div class="form-group">
                         <label for="per7">Seventh period</label>
-                        <select class="form-control" id="per7" name="per7">
+                        <select class="form-control disable" id="per7" name="per7">
                             <option>Select</option>
                             <option>Advanced Modeling</option>
                             <option>Art</option>
@@ -198,30 +196,30 @@ include("inc/header.php");
 ?>
 
 <!-- Modal -->
-    <div class="modal fade" id="request_ID">
-      <div class="modal-dialog">
+<div  id="request_ID" class="modal fade"  role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
         <div class="modal-content">
 
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title">Your Student ID will be sent to you in an email.<br>Your ID is private. Please do not share it with others.</h4>
-          </div>
-          <div class="modal-body">
-            <form class="form-inline">
-              <div class="form-group">
-                <label class="sr-only" for="email">Email address</label>
-                <input type="email" class="form-control" id="email" placeholder="Email">
-              </div>
-              <button type="submit" class="btn btn-primary" data-dismiss="modal">Send my Student ID</button>
-            </form>
-          </div>
+            <div class="modal-header">
+                <button type="button" id="xclose" class="close" data-dismiss="modal" data-target="request_ID">&times;</button>
+                <h4 class="modal-title">Your Student ID will be sent to you in an email.<br>Your ID is private. Please do not share it with others.</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-inline">
+                        <div class="form-group">
+                        <label class="sr-only" for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                        </div>
+                    <button type="submit" id="submit_modal" class="btn btn-primary" data-dismiss="modal">Send my Student ID</button>
+                </form>
+            </div>
 
         </div>
-      </div>
     </div>
-    <!-- End Modal -->
+</div>
+<!-- End Modal  -->
 
-<script src="app.min.js"></script>
+<script src="app.js"></script>
 <script>
     $(document).ready(function(){
         $('#profile').addClass('active');
