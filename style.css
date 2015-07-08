@@ -39,7 +39,7 @@ body {
 }
 
 #request {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 /*-----------------profile--------------------------*/
@@ -47,10 +47,24 @@ body {
 
 .form_block {
     background: #eee;  
-    padding: 10px 10px 5px 10px;
+    padding: 10px 15px 5px 15px;
     border-radius:  5px;
     margin-bottom: 20px;
 }
+
+.stud_ID {
+    padding-top: 20px;
+    width: 40%;
+    margin-left: auto;
+    margin-right:  auto;
+}
+
+/*.sav_res {
+    padding-top: 20px;
+    width: 40%;
+    margin-left: auto;
+    margin-right:  auto;
+}*/
 
 /*-----------------media queries---------------*/
 /*********************************************/

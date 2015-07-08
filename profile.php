@@ -10,17 +10,20 @@ include("inc/header.php");
         </div>
         <br>
         <form  id="profile_form" action="profile_process.php" method="post" role="form">
-            <div class="form_block center">
+            <div class="form_block stud_ID center">
                 <div class="form-group inline">
                     <label for="student_id">Enter your Student ID to begin</label>
                     <input type="text" class="form-control" id="student_id" name="student_id" placeholder="Student ID">
                 </div>
                 <div class="form-group">
-                    <label for="request">Need your ID?</label><br>                  
+                <label>---Be sure to save your infomation---</label>
+                <label>---with the "Submit" button below.---</label>
+                </div>
+                <div class="form-group">
+                    <label for="request">Don't know your ID?</label><br>                  
                     <button type="button" class="btn btn-info" data-toggle="modal" data-target="#request_ID" id="request">Request ID</button>
                 </div>
             </div>
-            
             <div class="form_block">
                 <div class="row">
                     <div class="col-sm-6">                
@@ -49,12 +52,11 @@ include("inc/header.php");
                     </div>
                 </div>
             </div>
-
             <div class="form_block">
                 <div class="row">
                     <div class="col-sm-6">
                         <h4>Class schedule</h4>
-                        <div class="tab10">
+                        <!-- <div class="tab10"> -->
                             <div class="form-group">
                                 <label for="per1">First period</label>
                                 <select class="form-control disable" id="per1" name = "per1">
@@ -112,10 +114,10 @@ include("inc/header.php");
                                     <option>Yearbook</option>
                                 </select>
                             </div>
-                        </div>
+                        <!-- </div> -->
                     </div>
                     <div class="col-sm-6">
-                        <div class="tab10">
+                        <!-- <div class="tab10"> -->
                             <div class="form-group">        
                                 <label for="per4">Fourth period</label>
                                 <select class="form-control disable" id="per4" name="per4">
@@ -192,14 +194,23 @@ include("inc/header.php");
                                     <option>Yearbook</option>
                                 </select>
                             </div>
-                        </div><!-- end class="tab10" -->
+                        <!-- </div>end class="tab10" -->
                     </div>
                 </div>
-            </div><!-- end form-block -->
-
-            <div class="form-group center">
-                <input type="submit" class="btn btn-info submit"></input>
-                <input type="button" value="Reset" class="btn btn-info reset_btn" ></input>
+            </div>
+           <div class="form_block stud_ID center">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group center">
+                        <input type="submit" value="Submit" id="submit" class="btn btn-info submit"></input>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group center">
+                        <input type="button" value="Reset" class="btn btn-info reset_btn" ></input>
+                        </div>
+                    </div>
+                </div>
             </div>
         </form>
     <br>
