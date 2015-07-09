@@ -198,18 +198,6 @@ include("inc/header.php");
                 <input type="submit" value="Submit" id="submit_btn" class="btn btn-info">
                 <input type="button" value="Reset" id="reset_btn" class="btn btn-info">
             </div>
-            <!-- <div class="row">
-                <div class="col-xs-6 col-xs-push-2">
-                    <div class="form-group center">
-                        <input type="submit" value="Submit" id="submit_btn" class="btn btn-info">
-                    </div>
-                </div>
-                <div class="col-xs-6 col-xs-pull-2">
-                    <div class="form-group center">
-                        <input type="button" value="Reset" id="reset_btn" class="btn btn-info">
-                    </div>
-                </div>
-            </div> -->
         </form>
        <br>
 
