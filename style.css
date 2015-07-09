@@ -45,6 +45,19 @@ body {
     margin-right:  auto;
 }
 
+#center_div {
+    margin-top: 20px;
+    margin-bottom:  40px;
+}
+
+#contact_div {
+    margin-bottom: 40px;
+}
+
+#wrapper {
+    margin-bottom: 40px;
+}
+
 /*-----------------media queries---------------*/
 /*********************************************/
 
