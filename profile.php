@@ -16,8 +16,8 @@ include("inc/header.php");
                     <input type="text" class="form-control" id="student_id" name="student_id" placeholder="Student ID">
                 </div>
                 <div class="form-group">
-                <label>---Be sure to save your infomation---</label>
-                <label>---with the "Submit" button below.---</label>
+                <label>Be sure to save your changes</label>
+                <label>with the "Submit" button.</label>
                 </div>
                 <div class="form-group">
                     <label for="request">Don't know your ID?</label><br>                  
@@ -56,7 +56,6 @@ include("inc/header.php");
                 <div class="row">
                     <div class="col-sm-6">
                         <h4>Class schedule</h4>
-                        <!-- <div class="tab10"> -->
                             <div class="form-group">
                                 <label for="per1">First period</label>
                                 <select class="form-control disable" id="per1" name = "per1">
@@ -114,104 +113,103 @@ include("inc/header.php");
                                     <option>Yearbook</option>
                                 </select>
                             </div>
-                        <!-- </div> -->
                     </div>
                     <div class="col-sm-6">
-                        <!-- <div class="tab10"> -->
-                            <div class="form-group">        
-                                <label for="per4">Fourth period</label>
-                                <select class="form-control disable" id="per4" name="per4">
-                                    <option>Select</option>
-                                    <option>Advanced Modeling</option>
-                                    <option>Art</option>
-                                    <option>Business Math</option>
-                                    <option>Chemistry 3</option>
-                                    <option>Economics</option>
-                                    <option>Etymology</option>
-                                    <option>French 3</option>
-                                    <option>French 4</option>
-                                    <option>Government</option>
-                                    <option>Novels</option>
-                                    <option>Spanish 3</option>
-                                    <option>Spanish 4</option>
-                                    <option>Yearbook</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="per5">Fifth period</label>
-                                <select class="form-control disable" id="per5" name="per5">
-                                    <option>Select</option>
-                                    <option>Advanced Modeling</option>
-                                    <option>Art</option>
-                                    <option>Business Math</option>
-                                    <option>Chemistry 3</option>
-                                    <option>Economics</option>
-                                    <option>Etymology</option>
-                                    <option>French 3</option>
-                                    <option>French 4</option>
-                                    <option>Government</option>
-                                    <option>Novels</option>
-                                    <option>Spanish 3</option>
-                                    <option>Spanish 4</option>
-                                    <option>Yearbook</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="per6">Sixth period</label>
-                                <select class="form-control disable" id="per6" name="per6">
-                                    <option>Select</option>
-                                    <option>Advanced Modeling</option>
-                                    <option>Art</option>
-                                    <option>Business Math</option>
-                                    <option>Chemistry 3</option>
-                                    <option>Economics</option>
-                                    <option>Etymology</option>
-                                    <option>French 3</option>
-                                    <option>French 4</option>
-                                    <option>Government</option>
-                                    <option>Novels</option>
-                                    <option>Spanish 3</option>
-                                    <option>Spanish 4</option>
-                                    <option>Yearbook</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="per7">Seventh period</label>
-                                <select class="form-control disable" id="per7" name="per7">
-                                    <option>Select</option>
-                                    <option>Advanced Modeling</option>
-                                    <option>Art</option>
-                                    <option>Business Math</option>
-                                    <option>Chemistry 3</option>
-                                    <option>Economics</option>
-                                    <option>Etymology</option>
-                                    <option>French 3</option>
-                                    <option>French 4</option>
-                                    <option>Government</option>
-                                    <option>Novels</option>
-                                    <option>Spanish 3</option>
-                                    <option>Spanish 4</option>
-                                    <option>Yearbook</option>
-                                </select>
-                            </div>
-                        <!-- </div>end class="tab10" -->
-                    </div>
-                </div>
-            </div>
-           <div class="form_block stud_ID center">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="form-group center">
-                        <input type="submit" value="Submit" id="submit" class="btn btn-info submit"></input>
+                        <div class="form-group">        
+                            <label for="per4">Fourth period</label>
+                            <select class="form-control disable" id="per4" name="per4">
+                                <option>Select</option>
+                                <option>Advanced Modeling</option>
+                                <option>Art</option>
+                                <option>Business Math</option>
+                                <option>Chemistry 3</option>
+                                <option>Economics</option>
+                                <option>Etymology</option>
+                                <option>French 3</option>
+                                <option>French 4</option>
+                                <option>Government</option>
+                                <option>Novels</option>
+                                <option>Spanish 3</option>
+                                <option>Spanish 4</option>
+                                <option>Yearbook</option>
+                            </select>
                         </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group center">
-                        <input type="button" value="Reset" class="btn btn-info reset_btn" ></input>
+                        <div class="form-group">
+                            <label for="per5">Fifth period</label>
+                            <select class="form-control disable" id="per5" name="per5">
+                                <option>Select</option>
+                                <option>Advanced Modeling</option>
+                                <option>Art</option>
+                                <option>Business Math</option>
+                                <option>Chemistry 3</option>
+                                <option>Economics</option>
+                                <option>Etymology</option>
+                                <option>French 3</option>
+                                <option>French 4</option>
+                                <option>Government</option>
+                                <option>Novels</option>
+                                <option>Spanish 3</option>
+                                <option>Spanish 4</option>
+                                <option>Yearbook</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="per6">Sixth period</label>
+                            <select class="form-control disable" id="per6" name="per6">
+                                <option>Select</option>
+                                <option>Advanced Modeling</option>
+                                <option>Art</option>
+                                <option>Business Math</option>
+                                <option>Chemistry 3</option>
+                                <option>Economics</option>
+                                <option>Etymology</option>
+                                <option>French 3</option>
+                                <option>French 4</option>
+                                <option>Government</option>
+                                <option>Novels</option>
+                                <option>Spanish 3</option>
+                                <option>Spanish 4</option>
+                                <option>Yearbook</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="per7">Seventh period</label>
+                            <select class="form-control disable" id="per7" name="per7">
+                                <option>Select</option>
+                                <option>Advanced Modeling</option>
+                                <option>Art</option>
+                                <option>Business Math</option>
+                                <option>Chemistry 3</option>
+                                <option>Economics</option>
+                                <option>Etymology</option>
+                                <option>French 3</option>
+                                <option>French 4</option>
+                                <option>Government</option>
+                                <option>Novels</option>
+                                <option>Spanish 3</option>
+                                <option>Spanish 4</option>
+                                <option>Yearbook</option>
+                            </select>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="form-group center">
+                <input type="submit" value="Submit" id="submit_btn" class="btn btn-info">
+                <input type="button" value="Reset" id="reset_btn" class="btn btn-info">
+            </div>
+            <!-- <div class="row">
+                <div class="col-xs-6 col-xs-push-2">
+                    <div class="form-group center">
+                        <input type="submit" value="Submit" id="submit_btn" class="btn btn-info">
+                    </div>
+                </div>
+                <div class="col-xs-6 col-xs-pull-2">
+                    <div class="form-group center">
+                        <input type="button" value="Reset" id="reset_btn" class="btn btn-info">
+                    </div>
+                </div>
+            </div> -->
         </form>
        <br>
 

@@ -1,21 +1,6 @@
-.tab10 {
-    margin-left: 10px;
-}
-/*.reset_btn, .submit, #request_ID {
-    color:  #000;
-    font-weight: bold;
-}*/
-.reset_btn {
-    margin-left: 20px;
-}
 
 #profile_alert {
     display:  inline-block;
-}
-
-/*back button on profile response page*/
-.back {
-    text-align: center;
 }
 
 body {
@@ -30,10 +15,6 @@ body {
     text-align: center;
 }
 
-#block {
-    text-align: left;
-}
-
 .inline {
     display: inline-block;
 }
@@ -42,8 +23,13 @@ body {
     margin-bottom: 0px;
 }
 
-/*-----------------profile--------------------------*/
-/*********************************************/
+#submit_btn {
+    margin-right:  25px;
+}
+
+#reset_btn {
+    margin-left:  25px;
+}
 
 .form_block {
     background: #eee;  
@@ -58,13 +44,6 @@ body {
     margin-left: auto;
     margin-right:  auto;
 }
-
-/*.sav_res {
-    padding-top: 20px;
-    width: 40%;
-    margin-left: auto;
-    margin-right:  auto;
-}*/
 
 /*-----------------media queries---------------*/
 /*********************************************/
@@ -88,6 +67,9 @@ body {
     }
     .page-header > h3 {
         font-size: 1.5em;
+    }
+    .stud_ID {
+        width: 100%;
     }
 }
 

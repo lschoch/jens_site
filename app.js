@@ -6,7 +6,7 @@ $(document).ready(function() {
 		//reset profile_form
 		$('#profile_form').get(0).reset(); 
 		// disable selected form buttons until valid student  ID has been entered
-		$('.submit, .reset_btn, .disable').each(function(){
+		$('#submit_btn,  #reset_btn, .disable').each(function(){
 				var prof_input = $(this);			   			
 				prof_input.attr('disabled', 'disabled');
 		});
@@ -29,12 +29,14 @@ $(document).ready(function() {
 
 		window.onbeforeunload = confirmExit;
 		
-		$('#submit').click(function() {
+		$('#submit_btn').click(function() {
+			console.log('submit clicked');
 			formmodified = 0; // reset formmodified after the submit button is clicked (ie, changes have been sent, OK to navigate to another page without confirmExit)
 		});
 	}
 
-	$('.reset_btn').click(function() {
+	$('#reset_btn').click(function() {
+		console.log('reset clicked');
 		startOver(); // reset profile_form and disable all buttons except student id
 	});
 
