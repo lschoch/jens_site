@@ -58,6 +58,11 @@ body {
     margin-bottom: 40px;
 }
 
+.caption {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
 /*-----------------media queries---------------*/
 /*********************************************/
 
