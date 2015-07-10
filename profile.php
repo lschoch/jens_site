@@ -60,9 +60,9 @@ include("inc/header.php");
                                 <label for="per1">First period</label>
                                 <select class="form-control disable" id="per1" name = "per1">
                                     <option>Select</option>
-                                    <option>Advanced Modeling</option>
+                                    <option>Adv Modeling</option>
                                     <option>Art</option>
-                                    <option>Business Math</option>
+                                    <option>Bus Math</option>
                                     <option>Chemistry 3</option>
                                     <option>Economics</option>
                                     <option>Etymology</option>
@@ -79,9 +79,9 @@ include("inc/header.php");
                                 <label for="per2">Second period</label>
                                 <select class="form-control disable" id="per2" name="per2">
                                     <option>Select</option>
-                                    <option>Advanced Modeling</option>
+                                    <option>Adv Modeling</option>
                                     <option>Art</option>
-                                    <option>Business Math</option>
+                                    <option>Bus Math</option>
                                     <option>Chemistry 3</option>
                                     <option>Economics</option>
                                     <option>Etymology</option>
@@ -98,9 +98,9 @@ include("inc/header.php");
                                 <label for="per3">Third period</label>
                                 <select class="form-control disable" id="per3" name="per3">
                                     <option>Select</option>
-                                    <option>Advanced Modeling</option>
+                                    <option>Adv Modeling</option>
                                     <option>Art</option>
-                                    <option>Business Math</option>
+                                    <option>Bus Math</option>
                                     <option>Chemistry 3</option>
                                     <option>Economics</option>
                                     <option>Etymology</option>
@@ -119,9 +119,9 @@ include("inc/header.php");
                             <label for="per4">Fourth period</label>
                             <select class="form-control disable" id="per4" name="per4">
                                 <option>Select</option>
-                                <option>Advanced Modeling</option>
+                                <option>Adv Modeling</option>
                                 <option>Art</option>
-                                <option>Business Math</option>
+                                <option>Bus Math</option>
                                 <option>Chemistry 3</option>
                                 <option>Economics</option>
                                 <option>Etymology</option>
@@ -138,9 +138,9 @@ include("inc/header.php");
                             <label for="per5">Fifth period</label>
                             <select class="form-control disable" id="per5" name="per5">
                                 <option>Select</option>
-                                <option>Advanced Modeling</option>
+                                <option>Adv Modeling</option>
                                 <option>Art</option>
-                                <option>Business Math</option>
+                                <option>Bus Math</option>
                                 <option>Chemistry 3</option>
                                 <option>Economics</option>
                                 <option>Etymology</option>
@@ -157,9 +157,9 @@ include("inc/header.php");
                             <label for="per6">Sixth period</label>
                             <select class="form-control disable" id="per6" name="per6">
                                 <option>Select</option>
-                                <option>Advanced Modeling</option>
+                                <option>Adv Modeling</option>
                                 <option>Art</option>
-                                <option>Business Math</option>
+                                <option>Bus Math</option>
                                 <option>Chemistry 3</option>
                                 <option>Economics</option>
                                 <option>Etymology</option>
@@ -176,9 +176,9 @@ include("inc/header.php");
                             <label for="per7">Seventh period</label>
                             <select class="form-control disable" id="per7" name="per7">
                                 <option>Select</option>
-                                <option>Advanced Modeling</option>
+                                <option>Adv Modeling</option>
                                 <option>Art</option>
-                                <option>Business Math</option>
+                                <option>Bus Math</option>
                                 <option>Chemistry 3</option>
                                 <option>Economics</option>
                                 <option>Etymology</option>
