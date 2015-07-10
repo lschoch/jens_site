@@ -20,6 +20,7 @@ $(document).ready(function() {
 	}
 
 	if($_path == '/jens_site/profile.php') {  // code specific to the profile.php documents
+		$('#profile').addClass('active');
 		formmodified=0; //reset formmodified when the document is loaded
 		startOver(); // reset profile_form and disable all buttons except student id
 

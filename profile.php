@@ -226,11 +226,6 @@ include("inc/header.php");
 <!-- End Modal  -->
 
 <script src="app.js"></script>
-<script>
-    $(document).ready(function(){
-        $('#profile').addClass('active');
-    });
-</script>
 
 <?php 
     include("inc/footer.php"); 
