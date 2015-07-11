@@ -40,39 +40,44 @@ $(document).ready(function() {
 
 		//load data from students.json file corresponding to student_id
 		$('#student_id').change(function() {
-			$.getJSON( 'students.json', function( data ) {
-				var stud_id = $('#student_id').val(); // the value entered in the student_id input
-				var found = false;
-				$.each(data, function(index, value) {
-					if(value.student_id  == stud_id) {					
-						$('#first').val(value.first);
-				   		$('#last').val(value.last); 
-				   		$('#homtel').val(value.homtel);
-				   		$('#mobtel').val(value.mobtel);
-				   		$('#email').val(value.email);
-				   		$('#per1').val(value.per1);
-				   		$('#per2').val(value.per2);
-				   		$('#per3').val(value.per3);
-				   		$('#per4').val(value.per4);
-				   		$('#per5').val(value.per5);
-				   		$('#per6').val(value.per6);
-				   		$('#per7').val(value.per7);
+			$.ajax( {
+				url: 'students.json',
+				type: 'get',
+				cache: false,
+				success: function( data ) {
+					var stud_id = $('#student_id').val(); // the value entered in the student_id input
+					var found = false;
+					$.each(data, function(index, value) {
+						if(value.student_id  == stud_id) {					
+							$('#first').val(value.first);
+					   		$('#last').val(value.last); 
+					   		$('#homtel').val(value.homtel);
+					   		$('#mobtel').val(value.mobtel);
+					   		$('#email').val(value.email);
+					   		$('#per1').val(value.per1);
+					   		$('#per2').val(value.per2);
+					   		$('#per3').val(value.per3);
+					   		$('#per4').val(value.per4);
+					   		$('#per5').val(value.per5);
+					   		$('#per6').val(value.per6);
+					   		$('#per7').val(value.per7);
 
-				   		found =true; // the input id was found in students.json, a valid id was entered
+					   		found =true; // the input id was found in students.json, a valid id was entered
 
-				   		// reenable buttons, inputs, selects after input of valid id and populating form data from students.json file
-						$('input, select, button, submit').each(function(){
-								var $input = $(this);			   			
-								$input.removeAttr('disabled');
-						});
-				   		return(false);
-				   	}
-			   	} );
-			   	if(!found) {
-			   		alert("Sorry, that is not a valid Student ID. \nPlease recheck your Student ID and try again.");
-			   		$('#student_id').val(' ');
-			   		startOver(); // reset profile_form and disable all buttons except student id
-			   	} 
+					   		// reenable buttons, inputs, selects after input of valid id and populating form data from students.json file
+							$('input, select, button, submit').each(function(){
+									var $input = $(this);			   			
+									$input.removeAttr('disabled');
+							});
+					   		return(false);
+					   	}
+				   	} );
+				   	if(!found) {
+				   		alert("Sorry, that is not a valid Student ID. \nPlease recheck your Student ID and try again.");
+				   		$('#student_id').val(' ');
+				   		startOver(); // reset profile_form and disable all buttons except student id
+				   	} 
+			   	}
 			});
 		});
 		
@@ -92,52 +97,73 @@ $(document).ready(function() {
 
 	if ($_path == '/jens_site/index.php') {
 		$('#index').addClass('active');
-		$.get('/jens_site/msg.html', function(data) {
-			var msgHtml;
-			msgHtml = data;
-			$('#message').append (msgHtml); 
+		$.ajax( {
+			url: '/jens_site/msg.html', 
+			type: 'get',
+			cache: false,
+			success: function(data) {
+				var msgHtml;
+				msgHtml = data;
+				$('#message').append (msgHtml); 
+			}
 		});
 	}
 
 	if($_path == '/jens_site/admin.php') {
-
-		$.get('msg.html', function(data) {
-			document.getElementById('msg_txt').innerHTML = data;
+		// populate text area with contents of msg.html
+		$.ajax( {
+			url: '/jens_site/msg.html',
+			type: 'get',
+			cache: false,
+			success: function(data) {
+				document.getElementById('msg_txt').innerHTML = data;
+			}
 		});
 
-		$.getJSON( 'students.json', function( data ) {
-			var contact_html;
-			contact_html = "<table id='contact_table' class='table table-striped table-bordered table-compressed'><caption><h4 class='caption'>Contact  info</h4></caption>";
-			contact_html += "<tr><th>Student ID</th><th>First</th><th>Last</th><th>Home Telephone</th><th>Mobile Telephone</th><th>Email</th></tr>";
-			$.each(data, function(index, value) {
-				contact_html += "<tr>";
-				contact_html += "<td>" + value.student_id + "</td><td>" + value.first + "</td><td>" + value.last + "</td><td>" + value.homtel + "</td><td>";
-				contact_html += value.mobtel + "</td><td>" + value.email + "</td>";
-				contact_html += "</tr>";
-			});
-			contact_html += "</table>";
-			document.getElementById('contact_div').innerHTML += contact_html;
-			$('#contact_table').toggle();
+		// retrieve data and create tables of contact info and class schedules
+		$.ajax( {
+			url: 'students.json',
+			type: 'get',
+			cache: false,
+			success: function( data ) {
+				var contact_html;
+				contact_html = "<table id='contact_table' class='table table-striped table-bordered table-compressed'><caption><h4 class='caption'>Contact  info</h4></caption>";
+				contact_html += "<tr><th>Student ID</th><th>First</th><th>Last</th><th>Home Telephone</th><th>Mobile Telephone</th><th>Email</th></tr>";
+				$.each(data, function(index, value) {
+					contact_html += "<tr>";
+					contact_html += "<td>" + value.student_id + "</td><td>" + value.first + "</td><td>" + value.last + "</td><td>" + value.homtel + "</td><td>";
+					contact_html += value.mobtel + "</td><td>" + value.email + "</td>";
+					contact_html += "</tr>";
+				});
+				contact_html += "</table>";
+				document.getElementById('contact_div').innerHTML += contact_html;
+				$('#contact_table').toggle();
+			}
 		});
 
-		$.getJSON( 'students.json', function( data ) {
-			var classes_html;
-			classes_html = "<table id='classes_table' class='table table-striped table-bordered table-compressed'><caption><h4 class='caption'>Classes</h4></caption";
-			classes_html += "<tr><th>Student ID</th><th>First</th><th>Last</th>";
-			classes_html += "<th>1st Period</th><th>2nd Period</th><th>3rd Period</th><th>4th Period</th><th>5th Period</th><th>6th Period</th><th>7th Period</th></tr>";
-			$.each(data, function(index, value) {
-				classes_html += "<tr>";
-				classes_html += "<td>" + value.student_id + "</td><td>" + value.first + "</td><td>" + value.last + "</td>";
-				classes_html += "<td>" + value.per1 + "</td><td>" + value.per2 + "</td><td>" + value.per3 + "</td><td>" + value.per4 + "</td><td>" + value.per5 + "</td><td>";
-				classes_html += value.per6 + "</td><td>" + value.per7 + "</td>";
-				classes_html += "</tr>";
-			});
-			classes_html += "</table>";
-			document.getElementById('classes_div').innerHTML += classes_html;
-			$('#classes_table').toggle();
+		$.ajax( {
+			url: 'students.json',
+			type: 'get',
+			cache: false,
+			success: function( data ) {
+				var classes_html;
+				classes_html = "<table id='classes_table' class='table table-striped table-bordered table-compressed'><caption><h4 class='caption'>Classes</h4></caption";
+				classes_html += "<tr><th>Student ID</th><th>First</th><th>Last</th>";
+				classes_html += "<th>1st Period</th><th>2nd Period</th><th>3rd Period</th><th>4th Period</th><th>5th Period</th><th>6th Period</th><th>7th Period</th></tr>";
+				$.each(data, function(index, value) {
+					classes_html += "<tr>";
+					classes_html += "<td>" + value.student_id + "</td><td>" + value.first + "</td><td>" + value.last + "</td>";
+					classes_html += "<td>" + value.per1 + "</td><td>" + value.per2 + "</td><td>" + value.per3 + "</td><td>" + value.per4 + "</td><td>" + value.per5 + "</td><td>";
+					classes_html += value.per6 + "</td><td>" + value.per7 + "</td>";
+					classes_html += "</tr>";
+				});
+				classes_html += "</table>";
+				document.getElementById('classes_div').innerHTML += classes_html;
+				$('#classes_table').toggle();
+			}
 		});
-		    
 
+		// buttons to toggle tables on and  off
 		$('#close_contact').click(function() {
 			$('#contact_table').toggle();
 		});
@@ -146,8 +172,8 @@ $(document).ready(function() {
 			$('#classes_table').toggle();
 		});
 
+		//submit data to server file (msg_process.php) when form is submitted by clicking submit btn
 		$('#msg_form').submit(function () {
-			console.log($(this).serialize());
 			$.ajax( {				
 				url: '/jens_site/msg_process.php',
 				type: 'POST',
