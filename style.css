@@ -13,6 +13,11 @@ body {
 
 .jumbotron, .center{
     text-align: center;
+    margin-top: 30px;
+}
+
+#block {
+    text-align: left;
 }
 
 .inline {
@@ -46,12 +51,12 @@ body {
 }
 
 #center_div {
-    margin-top: 20px;
-    margin-bottom:  40px;
+    margin-top: 40px;
+    margin-bottom:  20px;
 }
 
 #contact_div {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 #wrapper {
@@ -61,6 +66,19 @@ body {
 .caption {
     margin-top: 0px;
     margin-bottom: 0px;
+}
+
+/*text-area on admin page*/
+#msg {
+    margin-bottom: 8px;
+}
+
+#close_classes {
+    margin-left: 10px;
+}
+
+#toggle_label {
+    margin-bottom: 2px;
 }
 
 /*-----------------media queries---------------*/

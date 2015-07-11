@@ -5,69 +5,33 @@ include("inc/header.php");
 
 <body>
 <div class="container">
-    <div id="center_div" class="text-center">
-        <!-- <div  class="btn-group"> -->
-            <input type="button" value="Toggle Contact Info" id="close_contact" class="btn btn-info">
-            <input type="button" value="Toggle Classes" id="close_classes" class="btn btn-info">
-        <!-- </div> -->
+    <form id="msg_form" action="msg_process.php" method="post" role="form">
+        <div id="msg" class="form-group">
+            <label for="msg_submit">Enter message for home page:</label>
+            <textarea autofocus="true" form="msg_form" id="msg_txt" name="msg_txt" class="form-control" cols="100" rows="5"></textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" id="msg_submit" value="Submit" class="btn btn-info btn-xs">
+        </div>
+    </form>
+    <div id="center_div">
+        <label id="toggle_label">Tables</label><br>
+        <input type="button" value="Contact Info" id="close_contact" class="btn btn-info btn-sm">
+        <input type="button" value="Classes" id="close_classes" class="btn btn-info btn-sm">
     </div>
     <div id="wrapper">
         <div class="table-responsive">
-            <div id='contact_div'>
+            <div id="contact_div">
             </div>
         </div>
         <div class="table-responsive">
-            <div id='classes_div'>
+            <div id="classes_div">
             </div>
         </div>
     </div>
 </body>
 
-
-<script>
-
-    $.getJSON( 'students.json', function( data ) {
-        var contact_html;
-        contact_html = "<table id='contact_table' class='table table-striped table-bordered table-compressed'><caption><h4 class='caption'>Contact  info</h4></caption>";
-        contact_html += "<tr><th>Student ID</th><th>First</th><th>Last</th><th>Home Telephone</th><th>Mobile Telephone</th><th>Email</th></tr>";
-        $.each(data, function(index, value) {
-            contact_html += "<tr>";
-            contact_html += "<td>" + value.student_id + "</td><td>" + value.first + "</td><td>" + value.last + "</td><td>" + value.homtel + "</td><td>";
-            contact_html += value.mobtel + "</td><td>" + value.email + "</td>";
-            contact_html += "</tr>";
-        });
-        contact_html += "</table>";
-        document.getElementById('contact_div').innerHTML += contact_html;
-        $('#contact_table').toggle();
-    });
-
-    $.getJSON( 'students.json', function( data ) {
-        var classes_html;
-        classes_html = "<table id='classes_table' class='table table-striped table-bordered table-compressed'><caption><h4 class='caption'>Classes</h4></caption";
-        classes_html += "<tr><th>Student ID</th><th>First</th><th>Last</th>";
-        classes_html += "<th>1st Period</th><th>2nd Period</th><th>3rd Period</th><th>4th Period</th><th>5th Period</th><th>6th Period</th><th>7th Period</th></tr>";
-        $.each(data, function(index, value) {
-            classes_html += "<tr>";
-            classes_html += "<td>" + value.student_id + "</td><td>" + value.first + "</td><td>" + value.last + "</td>";
-            classes_html += "<td>" + value.per1 + "</td><td>" + value.per2 + "</td><td>" + value.per3 + "</td><td>" + value.per4 + "</td><td>" + value.per5 + "</td><td>";
-            classes_html += value.per6 + "</td><td>" + value.per7 + "</td>";
-            classes_html += "</tr>";
-        });
-        classes_html += "</table>";
-        document.getElementById('classes_div').innerHTML += classes_html;
-        $('#classes_table').toggle();
-    });
-    
-
-    $('#close_contact').click(function() {
-        $('#contact_table').toggle();
-    });
-
-    $('#close_classes').click(function() {
-        $('#classes_table').toggle();
-    });
-
-</script>
+<script src="app.js"></script>
 
 <?php 
     include("inc/footer.php"); 

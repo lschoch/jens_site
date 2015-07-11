@@ -89,4 +89,73 @@ $(document).ready(function() {
 		        }
 	    	});
 	}
+
+	if ($_path == '/jens_site/index.php') {
+		$('#index').addClass('active');
+		$.get('/jens_site/msg.html', function(data) {
+			var msgHtml;
+			msgHtml = data;
+			$('#message').append (msgHtml); 
+		});
+	}
+
+	if($_path == '/jens_site/admin.php') {
+
+		$.get('msg.html', function(data) {
+			document.getElementById('msg_txt').innerHTML = data;
+		});
+
+		$.getJSON( 'students.json', function( data ) {
+			var contact_html;
+			contact_html = "<table id='contact_table' class='table table-striped table-bordered table-compressed'><caption><h4 class='caption'>Contact  info</h4></caption>";
+			contact_html += "<tr><th>Student ID</th><th>First</th><th>Last</th><th>Home Telephone</th><th>Mobile Telephone</th><th>Email</th></tr>";
+			$.each(data, function(index, value) {
+				contact_html += "<tr>";
+				contact_html += "<td>" + value.student_id + "</td><td>" + value.first + "</td><td>" + value.last + "</td><td>" + value.homtel + "</td><td>";
+				contact_html += value.mobtel + "</td><td>" + value.email + "</td>";
+				contact_html += "</tr>";
+			});
+			contact_html += "</table>";
+			document.getElementById('contact_div').innerHTML += contact_html;
+			$('#contact_table').toggle();
+		});
+
+		$.getJSON( 'students.json', function( data ) {
+			var classes_html;
+			classes_html = "<table id='classes_table' class='table table-striped table-bordered table-compressed'><caption><h4 class='caption'>Classes</h4></caption";
+			classes_html += "<tr><th>Student ID</th><th>First</th><th>Last</th>";
+			classes_html += "<th>1st Period</th><th>2nd Period</th><th>3rd Period</th><th>4th Period</th><th>5th Period</th><th>6th Period</th><th>7th Period</th></tr>";
+			$.each(data, function(index, value) {
+				classes_html += "<tr>";
+				classes_html += "<td>" + value.student_id + "</td><td>" + value.first + "</td><td>" + value.last + "</td>";
+				classes_html += "<td>" + value.per1 + "</td><td>" + value.per2 + "</td><td>" + value.per3 + "</td><td>" + value.per4 + "</td><td>" + value.per5 + "</td><td>";
+				classes_html += value.per6 + "</td><td>" + value.per7 + "</td>";
+				classes_html += "</tr>";
+			});
+			classes_html += "</table>";
+			document.getElementById('classes_div').innerHTML += classes_html;
+			$('#classes_table').toggle();
+		});
+		    
+
+		$('#close_contact').click(function() {
+			$('#contact_table').toggle();
+		});
+
+		$('#close_classes').click(function() {
+			$('#classes_table').toggle();
+		});
+
+		$('#msg_form').submit(function () {
+			console.log($(this).serialize());
+			$.ajax( {				
+				url: '/jens_site/msg_process.php',
+				type: 'POST',
+				data: $(this).serialize(),
+				cache: false
+			});
+		return false;
+		});
+	}
+	
 });
