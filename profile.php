@@ -5,13 +5,10 @@ include("inc/header.php");
 
 <body>
     <div class="container">
-        <div class="center">
-        <h3>Student Profile Form</h3>
-        </div>
-        <br>
         <form  id="profile_form" action="profile_process.php" method="post" role="form">
-            <div class="form_block stud_ID center">
+            <div class="form_block center">
                 <div class="form-group inline">
+                    <h3>Student Profile Form</h3>
                     <label for="student_id">Enter your Student ID to begin</label>
                     <input type="text" class="form-control" id="student_id" name="student_id" placeholder="Student ID">
                 </div>

@@ -70,7 +70,12 @@ body {
 
 /*text-area on admin page*/
 #msg {
-    margin-bottom: 8px;
+    margin-bottom:  0px;
+    padding-bottom: 0px;
+}
+
+#msg_txt {
+    margin-bottom: 10px;
 }
 
 #close_classes {
@@ -79,6 +84,10 @@ body {
 
 #toggle_label {
     margin-bottom: 2px;
+}
+
+#admin_well {
+    padding-bottom: 5px;
 }
 
 #admin_head {
