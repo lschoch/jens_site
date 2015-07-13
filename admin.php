@@ -5,6 +5,9 @@ include("inc/header.php");
 
 <body>
 <div class="container">
+    <div class="well">
+        <h3 id="admin_head" class="center">Mrs Schoch's administration page.</h3>
+    </div>
     <form id="msg_form" action="msg_process.php" method="post" role="form">
         <div id="msg" class="form-group">
             <label for="msg_submit">Enter message for home page:</label>
