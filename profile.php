@@ -10,7 +10,7 @@ include("inc/header.php");
                 <div class="form-group inline">
                     <h3>Student Profile Form</h3>
                     <label for="student_id">Enter your Student ID to begin</label>
-                    <input type="text" class="form-control" id="student_id" name="student_id" placeholder="Student ID">
+                    <input type="password" class="form-control" id="student_id" name="student_id" placeholder="Student ID">
                 </div>
                 <div class="form-group">
                 <label>Be sure to save your changes</label>
@@ -205,10 +205,10 @@ include("inc/header.php");
 
             <div class="modal-header">
                 <button type="button" id="xclose" class="close" data-dismiss="modal" data-target="request_ID">&times;</button>
-                <h4 class="modal-title center">Your Student ID will be sent to you in an email.<!-- <br>Your ID is private. Please do not share it with others. --></h4>
+                <h4 class="modal-title center">Your Student ID will be sent to you by email.<!-- <br>Your ID is private. Please do not share it with others. --></h4>
             </div>
             <div class="modal-body">
-                <form id="mod_form" class="form_block center">
+                <form id="mod_form" class="form_block center" action="mod_form_process.php" method="post" role="form">
                     <div id="mod_form_group" class="form-group inline">
                         <label class="sr-only" for="email">Email address</label>
                         <div class="form-group">
@@ -221,7 +221,7 @@ include("inc/header.php");
                             <input type="email" class="form-control" id="mod_email" name="mod_email" placeholder="Email">
                         </div>
                         <div class="form-group">
-                            <button type="submit" id="submit_modal" class="btn btn-info" data-dismiss="modal">Send me my Student ID</button>
+                            <input type="submit" name="submit" id="submit_modal" class="btn btn-info" value="Send me my Student ID">
                         </div>
                     </div>
                 </form>
@@ -230,7 +230,7 @@ include("inc/header.php");
         </div>
     </div>
 </div>
-<!-- End Modal  -->
+<!-- End Modal  data-dismiss="modal"-->
 
 <script src="app.js"></script>
 

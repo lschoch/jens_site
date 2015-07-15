@@ -3,6 +3,7 @@ $(document).ready(function() {
 
 	//reset profile_form, disable all buttons except  student_id,  reenable after student_id has been entered and the form populated with archived data, if any
 	function  startOver() {
+		formmodified = 0;
 		//reset profile_form
 		$('#profile_form').get(0).reset(); 
 		// disable selected form buttons until valid student  ID has been entered
@@ -38,7 +39,7 @@ $(document).ready(function() {
 			startOver(); // reset profile_form and disable all buttons except student id
 		});
 
-		//load data from students.json file corresponding to student_id
+		//if student_id changes, check students.json file to see if this id already exists. Load into the form fields if the id exists, alert if doesn't exist.
 		$('#student_id').change(function() {
 			$.ajax( {
 				url: 'students.json',
@@ -81,7 +82,7 @@ $(document).ready(function() {
 			});
 		});
 		
-		//prevent submit on input keypresses 
+		//prevent submitting profile form on input keypresses 
 		$('input, selector, button').keypress(function(event){
 		        var enterOkClass =  $(this).attr('class');
 		        if (event.which == 13 && enterOkClass != 'enterSubmit' ) {  // add  'enterSubmit' class to any button for which submit on  enter should not be disabled
@@ -93,10 +94,27 @@ $(document).ready(function() {
 		            return false;   
 		        }
 	    	});
+
+		//submit form requesting student  id
+		$('#mod_form').submit(function () {
+			formmodified = 0;
+			$.ajax( {				
+				url: '/jens_site/mod_form_process.php',
+				type: 'POST',
+				data: $(this).serialize(),
+				cache: false,
+				success: function() {
+					alert("Your Student ID has been emailed to you.");
+				}
+			});
+			$('#mod_form').modal(hide);
+			return false;
+		});
 	}
 
 	if ($_path == '/jens_site/index.php') {
 		$('#index').addClass('active');
+		// load msg.html generated from admin page
 		$.ajax( {
 			url: '/jens_site/msg.html', 
 			type: 'get',
@@ -110,7 +128,7 @@ $(document).ready(function() {
 	}
 
 	if($_path == '/jens_site/admin.php') {
-		// populate text area with contents of msg.html
+		// populate message textarea with contents of msg.html
 		$.ajax( {
 			url: '/jens_site/msg.html',
 			type: 'get',
