@@ -200,20 +200,30 @@ include("inc/header.php");
 
 <!-- Modal -->
 <div  id="request_ID" class="modal fade"  role="dialog" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-sm">
         <div class="modal-content">
 
             <div class="modal-header">
                 <button type="button" id="xclose" class="close" data-dismiss="modal" data-target="request_ID">&times;</button>
-                <h4 class="modal-title">Your Student ID will be sent to you in an email.<br>Your ID is private. Please do not share it with others.</h4>
+                <h4 class="modal-title center">Your Student ID will be sent to you in an email.<!-- <br>Your ID is private. Please do not share it with others. --></h4>
             </div>
             <div class="modal-body">
-                <form class="form-inline">
-                        <div class="form-group">
+                <form id="mod_form" class="form_block center">
+                    <div id="mod_form_group" class="form-group inline">
                         <label class="sr-only" for="email">Email address</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="mod_first" name="mod_first" placeholder="First Name"> 
                         </div>
-                    <button type="submit" id="submit_modal" class="btn btn-info" data-dismiss="modal">Send my Student ID</button>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="mod_last" name="mod_last" placeholder="Last Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="mod_email" name="mod_email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" id="submit_modal" class="btn btn-info" data-dismiss="modal">Send me my Student ID</button>
+                        </div>
+                    </div>
                 </form>
             </div>
 

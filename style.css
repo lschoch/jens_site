@@ -94,6 +94,20 @@ body {
     margin: 0px;
 }
 
+#mod_form {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:  10px;
+    margin-bottom: 10px;
+}
+
+#mod_form_group {
+    margin: 0px;
+    padding-top: 10px;
+}
+
+
 /*-----------------media queries---------------*/
 /*********************************************/
 
