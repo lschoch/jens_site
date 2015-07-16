@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
 	$_path = $(location).attr('pathname');
 
@@ -29,6 +30,13 @@ $(document).ready(function() {
 			formmodified=1;
 		});
 
+		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		$('#profile_form').focusin(function() { 
+			stud_id = $('#student_id');
+			student_id.focus(); // give focus to back to student_id field
+		});
+		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 		$('#mod_form').change(function() { // no need to confirmExit if student ID is requested; i.e., allow abandonment of changes to profile form
 			formmodified=0;
 		});
@@ -42,6 +50,16 @@ $(document).ready(function() {
 		$('#reset_btn').click(function() {
 			startOver(); // reset profile_form and disable all buttons except student id
 		});
+
+		$('#request_ID').on('shown.bs.modal', function () { // give focus to first name field
+			$('#mod_first').focus();
+		});
+
+		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		/*$('#request_ID').on('hidden.bs.modal', function () { // give focus to back to student_id field
+			$('#student_id').focus();
+		});*/
+		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 		//if student_id changes, check students.json file to see if this id already exists. Load into the form fields if the id exists, alert if doesn't exist.
 		$('#student_id').change(function() {
@@ -86,17 +104,13 @@ $(document).ready(function() {
 			});
 		});
 		
-		//prevent submitting profile form on input keypresses 
-		$('input, selector, button').keypress(function(event){
-		        var enterOkClass =  $(this).attr('class');
-		        if (event.which == 13 && enterOkClass != 'enterSubmit' ) {  // add  'enterSubmit' class to any button for which submit on  enter should not be disabled
-		            event.preventDefault();
-		            $('input, select, button, submit').each(function(){
-	   			var prof_input = $(this);			   			
-	   			prof_input.blur();
-			});
-		            return false;   
-		        }
+		//prevent submitting profile form on input keypresses (after they have been enabled by the sutdent_ID change function) 
+		$('input, select, button').not('#student_id').keypress(function(event){
+			var enterOkClass =  $(this).attr('class');
+			if ( event.which == 13 && enterOkClass != 'enterSubmit' ) {  // add  'enterSubmit' class to any button for which submit form on enter should not be disabled
+				event.preventDefault();
+				return false;   
+			}
 	    	});
 
 	}
