@@ -16,7 +16,7 @@ $(document).ready(function() {
 
 	function confirmExit() {
 		if (formmodified == 1) {
-		return "New information has not been saved.";
+		return "Your changes have not been saved.";
 		}
 	}
 
@@ -25,8 +25,12 @@ $(document).ready(function() {
 		formmodified=0; //reset formmodified when the document is loaded
 		startOver(); // reset profile_form and disable all buttons except student id
 
-		$('form *').change(function(){ // set flag that form has been modified
+		$('#profile_form *').change(function(){ // set flag that form has been modified
 			formmodified=1;
+		});
+
+		$('#mod_form').change(function() { // no need to confirmExit if student ID is requested; i.e., allow abandonment of changes to profile form
+			formmodified=0;
 		});
 
 		window.onbeforeunload = confirmExit;
@@ -95,21 +99,6 @@ $(document).ready(function() {
 		        }
 	    	});
 
-		//submit form requesting student  id
-		$('#mod_form').submit(function () {
-			formmodified = 0;
-			$.ajax( {				
-				url: '/jens_site/mod_form_process.php',
-				type: 'POST',
-				data: $(this).serialize(),
-				cache: false,
-				success: function() {
-					alert("Your Student ID has been emailed to you.");
-				}
-			});
-			$('#mod_form').modal(hide);
-			return false;
-		});
 	}
 
 	if ($_path == '/jens_site/index.php') {

@@ -210,18 +210,20 @@ include("inc/header.php");
             <div class="modal-body">
                 <form id="mod_form" class="form_block center" action="mod_form_process.php" method="post" role="form">
                     <div id="mod_form_group" class="form-group inline">
-                        <label class="sr-only" for="email">Email address</label>
                         <div class="form-group">
+                            <label class="sr-only" for="mod_first">First Name</label>
                             <input type="text" class="form-control" id="mod_first" name="mod_first" placeholder="First Name"> 
                         </div>
                         <div class="form-group">
+                            <label class="sr-only" for="mod_last">Last Name</label>
                             <input type="text" class="form-control" id="mod_last" name="mod_last" placeholder="Last Name">
                         </div>
                         <div class="form-group">
+                            <label class="sr-only" for="email">Email address</label>
                             <input type="email" class="form-control" id="mod_email" name="mod_email" placeholder="Email">
                         </div>
                         <div class="form-group">
-                            <input type="submit" name="submit" id="submit_modal" class="btn btn-info" value="Send me my Student ID">
+                            <input type="submit" name="submit_modal" id="submit_modal" class="btn btn-info" value="Send me my Student ID">
                         </div>
                     </div>
                 </form>

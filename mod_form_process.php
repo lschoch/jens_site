@@ -32,7 +32,16 @@
 				"student_id" => $password,
 				"first" => $_POST["mod_first"],
 				"last" => $_POST["mod_last"],
-				"email" => $_POST["mod_email"]
+				"email" => $_POST["mod_email"],
+				"homtel" => " ",
+				"mobtel" => " ",
+				"per1" => "Select",
+				"per2" => "Select",
+				"per3" => "Select",
+				"per4" => "Select",
+				"per5" => "Select",
+				"per6" => "Select",
+				"per7" => "Select"
 			];
 			array_push($stored, $tempArray);
 			file_put_contents('students.json', json_encode($stored));  //save the $stored array to the json file with json encoding
@@ -43,7 +52,7 @@
 		// check name against class list -or- use request ID function to enter students and create their passwords
 		// send email with student ID and caution: student ID is private, do not share it with others
 
-		header("Location: profile.php"); // redirect so that form won't be resubmitted*/
+		header("Location: mod_form_response.php"); // redirect so that form won't be resubmitted*/
 		exit;
     
 	}
