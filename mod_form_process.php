@@ -1,6 +1,7 @@
 <?php
 	$password = "";
 	$tempArray = [];
+	$found = false;
 
 	function random_password( $length = 8 ) {
 		$password = "";
@@ -23,19 +24,34 @@
 		foreach ($stored as $key => $value) { //looping through the student objects
 			if ( strtolower($value["last"]) === strtolower($_POST["mod_last"])  and strtolower($value["first"]) === strtolower($_POST["mod_first"]) ) {
 				$password = $value["student_id"];
-				$value['email'] = $_POST["mod_email"]; // capture email
+				$value['email'] = $_POST['mod_email']; // capture email
+				$stored[$key] = $value;
 				file_put_contents('students.json', json_encode($stored));  //save the $stored array to the json file with json encoding
 				unset($stored); // release memory
-				unset($tempArray); // release memory
-				header("Location: mod_form_response.php"); // redirect so that form won't be resubmitted*/
-				// send email with student ID and caution: student ID is private, do not share it with others
+				$found = true;
+				//header("Location: mod_form_response.php"); // redirect so that form won't be resubmitted*/
+					// send email with student ID and caution: student ID is private, do not share it with others
+				$message = 'Your Student ID has been emailed to you.';
+				echo "<SCRIPT>
+				alert('$message');
+				window.location.replace('profile.php');
+				</SCRIPT>";	
 				exit;
 			}
 		}
 		
 		// alert for name not in students.json
-		if(!$password) {
+		/*if(!$password) {
 			header("Location: mod_form_response_response.php");
+			exit;
+		}*/
+		// alert for name not in students.json
+		if(!$found) {
+			$message = 'That first and last name combination was not found in the class list. Please check your spelling and try again.';
+			echo "<SCRIPT>
+			alert('$message');
+			window.location.replace('profile.php');
+			</SCRIPT>";
 			exit;
 		}
 

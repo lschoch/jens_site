@@ -53,7 +53,7 @@ body {
 }
 
 #center_div {
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom:  20px;
 }
 
@@ -80,7 +80,7 @@ body {
     margin-bottom: 10px;
 }
 
-#close_classes, #delete_student {
+#close_classes, #del_stud_trig {
     margin-left: 10px;
 }
 

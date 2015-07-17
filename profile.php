@@ -4,14 +4,14 @@ include("inc/header.php");
 ?>
 
 <body>
-    <!-- Modal -->
+    <!-- request_ID modal -->
     <div  id="request_ID" class="modal fade"  role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
 
                 <div class="modal-header">
-                    <button type="button" id="xclose" class="close" data-dismiss="modal" data-target="request_ID">&times;</button>
-                    <h4 class="modal-title center">Your Student ID will be sent to you by email.<!-- <br>Your ID is private. Please do not share it with others. --></h4>
+                    <button type="button" id="xclose" class="close" data-dismiss="modal" data-target="#request_ID">&times;</button>
+                    <h4 class="modal-title center">Your Student ID will be sent to you by email.</h4>
                 </div>
                 <div class="modal-body">
                     <form id="mod_form" class="form_block center" action="mod_form_process.php" method="post" role="form">
@@ -38,7 +38,7 @@ include("inc/header.php");
             </div>
         </div>
     </div>
-    <!-- End Modal  data-dismiss="modal"-->
+    <!-- end request_ID modal-->
 
     <div class="container">
         <form  id="profile_form" action="profile_process.php" method="post" role="form">

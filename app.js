@@ -2,26 +2,26 @@
 $(document).ready(function() {
 	$_path = $(location).attr('pathname');
 
-	//reset profile_form, disable all buttons except  student_id,  reenable after student_id has been entered and the form populated with archived data, if any
-	function  startOver() {
-		formmodified = 0;
-		//reset profile_form
-		$('#profile_form').get(0).reset(); 
-		// disable selected form buttons until valid student  ID has been entered
-		$('#submit_btn,  #reset_btn, .disable').each(function(){
+	if($_path == '/jens_site/profile.php') {  // code specific to the profile.php documents
+		//reset profile_form, disable all buttons except  student_id,  reenable after student_id has been entered and the form populated with archived data, if any
+		function  startOver() {
+			formmodified = 0;
+			//reset profile_form
+			$('#profile_form').get(0).reset(); 
+			// disable selected form buttons until valid student  ID has been entered
+			$('#submit_btn,  #reset_btn, .disable').each(function(){
 				var prof_input = $(this);			   			
 				prof_input.attr('disabled', 'disabled');
-		});
-		$('#student_id').focus();
-	}
-
-	function confirmExit() {
-		if (formmodified == 1) {
-		return "Your changes have not been saved.";
+			});
+			$('#student_id').focus();
 		}
-	}
 
-	if($_path == '/jens_site/profile.php') {  // code specific to the profile.php documents
+		function confirmExit() {
+			if (formmodified == 1) {
+			return "Your changes have not been saved.";
+			}
+		}
+
 		$('#profile').addClass('active');
 		formmodified=0; //reset formmodified when the document is loaded
 		startOver(); // reset profile_form and disable all buttons except student id
@@ -109,7 +109,7 @@ $(document).ready(function() {
 			});
 		});
 		
-		//prevent submitting profile form on input keypresses (after they have been enabled by the sutdent_ID change function) 
+		//prevent submitting profile form on input keypresses (after they have been enabled by the student_ID change function) 
 		$('input, select, button').not('#student_id').keypress(function(event){
 			var enterOkClass =  $(this).attr('class');
 			if ( event.which == 13 && enterOkClass != 'enterSubmit' ) {  // add  'enterSubmit' class to any button for which submit form on enter should not be disabled
@@ -208,6 +208,62 @@ $(document).ready(function() {
 			});
 		return false;
 		});
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+		//prevent submitting delete modal  on input keypresses (after they have been enabled by the sutdent_ID change function) 
+		/*$('#delete_student').keypress(function(event){
+			if ( event.which == 13 ) {  // add  'enterSubmit' class to any button for which submit form on enter should not be disabled
+				event.preventDefault();
+				return false;   
+			}
+	    	});*/
+		
+		$('#delete_student').on('shown.bs.modal', function () { // give focus to the input field
+			element = $('#mod_del_id');
+			element.val("");
+			element.focus();
+		});
+
+		/*$('#del_form').submit(function(event) {
+			event.preventDefault();
+			var newData = [];
+			$('#delete_student').modal('hide');
+			$.ajax( {
+				url: 'students.json',
+				type: 'get',
+				cache: false,
+				success: newData = function( data ) {
+					var stud_id = $('#mod_del_id').val();
+					var found = false;
+					$.each(data, function(index, value) {
+						if(value.student_id  ===  stud_id) {
+							data.splice(index, 1);
+							found = true; // the input id was found in students.json, a valid id was entered
+							newData = data;
+					   		return(false);
+					   	}
+				   	} );
+				   	if(!found) {
+				   		alert("Sorry, that is not a valid Student ID. \nPlease recheck your Student ID and try again.");
+				   		$('#student_id').val(' ');
+				   	} 
+			   	}
+			});
+			console.log(newData[0]);
+			$.ajax( {
+				url: '/jens_site/delete_process.php',
+				type: 'POST',
+				data: newData.serialize(),
+				dataType: 'text',
+				cache: false,
+				success:  function() {
+					alert('new data posted successfully');
+				}
+			});
+		});*/
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 	}
 	
 });
