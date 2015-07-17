@@ -18,15 +18,15 @@ include("inc/header.php");
                         <div id="mod_form_group" class="form-group inline">
                             <div class="form-group">
                                 <label class="sr-only" for="mod_first">First Name</label>
-                                <input type="text" class="form-control" id="mod_first" name="mod_first" placeholder="First Name"> 
+                                <input type="text" class="form-control" id="mod_first" name="mod_first" required placeholder="First Name"> 
                             </div>
                             <div class="form-group">
                                 <label class="sr-only" for="mod_last">Last Name</label>
-                                <input type="text" class="form-control" id="mod_last" name="mod_last" placeholder="Last Name">
+                                <input type="text" class="form-control" id="mod_last" name="mod_last" required placeholder="Last Name">
                             </div>
                             <div class="form-group">
                                 <label class="sr-only" for="email">Email address</label>
-                                <input type="email" class="form-control" id="mod_email" name="mod_email" placeholder="Email">
+                                <input type="email" class="form-control" id="mod_email" name="mod_email" required placeholder="Email">
                             </div>
                             <div class="form-group">
                                 <input type="submit" name="submit_modal" id="submit_modal" class="btn btn-info" value="Send me my Student ID">

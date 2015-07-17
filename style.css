@@ -1,6 +1,8 @@
 
-#profile_alert {
+#profile_alert, #not_found_alert, #mod_form_response_alert {
     display:  inline-block;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 body {
@@ -78,7 +80,7 @@ body {
     margin-bottom: 10px;
 }
 
-#close_classes {
+#close_classes, #delete_student {
     margin-left: 10px;
 }
 
@@ -106,7 +108,6 @@ body {
     margin: 0px;
     padding-top: 10px;
 }
-
 
 /*-----------------media queries---------------*/
 /*********************************************/

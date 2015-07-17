@@ -5,7 +5,7 @@
 
 <br><br>
 <div class="center">
-    <div class="alert alert-success" id="profile_alert" role="alert"><h3>Your Student ID has been emailed to you.<h3>
+    <div class="alert alert-success" id="mod_form_response_alert" role="alert"><h3>Your Student ID has been emailed to you.<h3>
         <br>
         <div class="form-group back">
             <input type="button" id="back-btn" class="btn btn-info" value="Back" onclick="goBack()"></input>
