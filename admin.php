@@ -14,12 +14,16 @@ include("inc/header.php");
         <div id="msg" class="form-group well">
             <label for="msg_submit">Message for home page:</label>
             <textarea autofocus="true" form="msg_form" id="msg_txt" name="msg_txt" class="form-control" cols="100" rows="5"></textarea>
-            <!-- </div> -->
             <div class="form-group">
                 <input type="submit" id="msg_submit" value="Submit" class="btn btn-info btn-sm">
             </div>
         </div>
     </form>
+
+    <div id="center_div">
+        <input type="button" value="Add Student" id="add_student" class="btn btn-info btn-sm">
+        <input type="button" value="Delete Student" id="delete_student" class="btn btn-info btn-sm">
+    </div>
 
     <div id="center_div">
         <label id="toggle_label">Tables</label><br>
