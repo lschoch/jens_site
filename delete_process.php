@@ -23,7 +23,8 @@
 				echo "<SCRIPT>
 				alert('$message');
 				window.location.replace('admin.php');
-				</SCRIPT>";				
+				</SCRIPT>";
+				exit;			
 			}
 		}
 		
@@ -34,11 +35,11 @@
 			alert('$message');
 			window.location.replace('admin.php');
 			</SCRIPT>";
+			exit;
 			// window.history.go(-1);
 			
 		}
 
-		exit;
 	}
 
 ?>

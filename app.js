@@ -199,15 +199,15 @@ $(document).ready(function() {
 		});
 
 		//submit data to server file (msg_process.php) when form is submitted by clicking submit btn
-		$('#msg_form').submit(function () {
-			$.ajax( {				
-				url: '/jens_site/msg_process.php',
-				type: 'POST',
-				data: $(this).serialize(),
-				cache: false
-			});
-		return false;
-		});
+		// $('#msg_form').submit(function () {
+		// 	$.ajax( {				
+		// 		url: '/jens_site/msg_process.php',
+		// 		type: 'POST',
+		// 		data: $(this).serialize(),
+		// 		cache: false
+		// 	});
+		// 	return false;
+		// });
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -225,43 +225,6 @@ $(document).ready(function() {
 			element.focus();
 		});
 
-		/*$('#del_form').submit(function(event) {
-			event.preventDefault();
-			var newData = [];
-			$('#delete_student').modal('hide');
-			$.ajax( {
-				url: 'students.json',
-				type: 'get',
-				cache: false,
-				success: newData = function( data ) {
-					var stud_id = $('#mod_del_id').val();
-					var found = false;
-					$.each(data, function(index, value) {
-						if(value.student_id  ===  stud_id) {
-							data.splice(index, 1);
-							found = true; // the input id was found in students.json, a valid id was entered
-							newData = data;
-					   		return(false);
-					   	}
-				   	} );
-				   	if(!found) {
-				   		alert("Sorry, that is not a valid Student ID. \nPlease recheck your Student ID and try again.");
-				   		$('#student_id').val(' ');
-				   	} 
-			   	}
-			});
-			console.log(newData[0]);
-			$.ajax( {
-				url: '/jens_site/delete_process.php',
-				type: 'POST',
-				data: newData.serialize(),
-				dataType: 'text',
-				cache: false,
-				success:  function() {
-					alert('new data posted successfully');
-				}
-			});
-		});*/
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	}

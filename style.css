@@ -96,6 +96,10 @@ body {
     margin: 0px;
 }
 
+#msg_submit {
+    margin-top: 5px;
+}
+
 #mod_form {
     width: 90%;
     margin-left: auto;

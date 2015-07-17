@@ -5,6 +5,35 @@ include("inc/header.php");
 ?>
 
 <body>
+
+<!-- delete modal -->
+<div  id="delete_student" class="modal fade"  role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" id="xxclose" class="close" data-dismiss="modal" data-target="#delete_student">&times;</button>
+                <h4 class="modal-title center">Delete student using Student ID.</h4>
+            </div>
+            <div class="modal-body">
+                <form id="mod_del" class="form_block center" action="delete_process.php" method="post" role="form">
+                    <div id="mod_form_group" class="form-group inline">
+                        <div class="form-group">
+                            <label class="sr-only" for="mod_del_id">Student ID</label>
+                            <input type="text" class="form-control" id="mod_del_id" name="mod_del_id" required placeholder="Student ID"> 
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="mod_del_submit" id="mod_del_submit" class="btn btn-info btn-sm" value="Delete">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- end delete modal-->
+
 <div class="container">
     <div id="admin_well" class="inline well">
         <h3 id="admin_head">Mrs Schoch's administration page.</h3>
@@ -22,7 +51,7 @@ include("inc/header.php");
 
     <div id="center_div">
         <input type="button" value="Add Student" id="add_student" class="btn btn-info btn-sm">
-        <input type="button" value="Delete Student" id="delete_student" class="btn btn-info btn-sm">
+        <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#delete_student" id="del_stud_trig">Delete Student</button>
     </div>
 
     <div id="center_div">
