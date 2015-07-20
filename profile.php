@@ -10,7 +10,7 @@ include("inc/header.php");
             <div class="modal-content">
 
                 <div class="modal-header">
-                    <button type="button" id="xclose" class="close" data-dismiss="modal" data-target="#request_ID">&times;</button>
+                    <button type="button" class="close" data-dismiss="modal" data-target="#request_ID">&times;</button>
                     <h4 class="modal-title center">Your Student ID will be sent to you by email.</h4>
                 </div>
                 <div class="modal-body">

@@ -19,7 +19,7 @@
 				unset($stored); // release memory
 				unset($tempArray); // release memory
 				$found = true;
-				$message = 'Student ' . $first . ' ' . $last . ' was deleted.';
+				$message = 'Student ' . $first . ' ' . $last . ' was deleted from the class list.';
 				echo "<SCRIPT>
 				alert('$message');
 				window.location.replace('admin.php');

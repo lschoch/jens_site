@@ -108,7 +108,7 @@ body {
     margin-bottom: 10px;
 }
 
-#mod_form_group {
+#mod_form_group, #add_form_group {
     margin: 0px;
     padding-top: 10px;
 }
