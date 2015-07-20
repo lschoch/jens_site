@@ -40,8 +40,8 @@
 		$password = random_password(8);
 		$tempArray = [ 
 			"student_id" => $password,
-			"first" => $_POST["add_first"],
-			"last" => $_POST["add_last"],
+			"first" => $add_first,
+			"last" => $add_last,
 			"email" => " ",
 			"homtel" => " ",
 			"mobtel" => " ",

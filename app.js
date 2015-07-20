@@ -44,15 +44,12 @@ $(document).ready(function() {
 			startOver(); // reset profile_form and disable all buttons except student id
 		});
 
-		$('#request_ID').on('shown.bs.modal', function () { // give focus to first name field
+		$('#request_ID').on('shown.bs.modal', function () { // clear form and give focus to first name field
+			$('#request_ID input').not($('#submit_modal')).each(function () {
+				$(this).val("");
+			});
 			$('#mod_first').focus();
 		});
-
-		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		/*$('#request_ID').on('hidden.bs.modal', function () { // give focus to back to student_id field
-			$('#student_id').focus();
-		});*/
-		/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 		//if student_id changes, check students.json file to see if this id already exists. Load into the form fields if the id exists, alert if doesn't exist.
 		$('#student_id').change(function() {
@@ -206,16 +203,19 @@ $(document).ready(function() {
 			}
 	    	});*/
 		
-		$('#delete_student').on('shown.bs.modal', function () { // give focus to the input field
-			element = $('#mod_del_id');
-			element.val("");
-			element.focus();
+		$('#delete_student').on('shown.bs.modal', function () { // clear form and give focus to the input field
+			del_el = $('#mod_del_id');
+			del_el.val("");
+			del_el.focus();
 		});
 
-		$('#add_student').on('shown.bs.modal', function () { // give focus to the input field
-			element = $('#add_first');
-			element.val("");
-			element.focus();
+		$('#add_student').on('shown.bs.modal', function () { // clear form and give focus to the first name field
+			console.log('add student shown');
+			add_first_el = $('#add_first');
+			add_last_el = $('#add_last');
+			add_first_el.val("");
+			add_last_el.val("");
+			add_first_el.focus();
 		});
 
 

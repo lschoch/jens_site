@@ -23,7 +23,7 @@ include("inc/header.php");
                             <input type="text" class="form-control" id="add_first" name="add_first" required placeholder="First Name"> 
                         </div>
                         <div class="form-group">
-                            <label class="sr-only" for="mod_last">Last Name</label>
+                            <label class="sr-only" for="add_last">Last Name</label>
                             <input type="text" class="form-control" id="add_last" name="add_last" required placeholder="Last Name">
                         </div>
                         <div class="form-group">

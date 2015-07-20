@@ -31,6 +31,17 @@
 				$found = true;
 				//header("Location: mod_form_response.php"); // redirect so that form won't be resubmitted*/
 					// send email with student ID and caution: student ID is private, do not share it with others
+				$to = $_POST['mod_email'];
+				$subject = 'Your Student ID';
+				$content = 'Your Student ID is: <b>' . $password . '</b><br><br>Your Student ID is private and should not be shared with others. 
+				This is an automated response. Please do not reply.';
+				$headers = "From: SWHS.senior.english@gmail.com\r\n";
+				$headers .= "Reply-To: Do Not Reply\r\n";
+				$headers .= "MIME-Version: 1.0\r\n";
+				$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+
+
+				mail($to, $subject, $content, $headers);
 				$message = 'Your Student ID has been emailed to you.';
 				echo "<SCRIPT>
 				alert('$message');
