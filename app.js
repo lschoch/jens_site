@@ -11,7 +11,7 @@ $(document).ready(function() {
 			// disable selected form buttons until valid student  ID has been entered
 			$('#submit_btn,  #reset_btn, .disable').each(function(){
 				var prof_input = $(this);			   			
-				prof_input.attr('disabled', 'disabled');
+				prof_input.prop('disabled', true);
 			});
 			$('#student_id').focus();
 		}
@@ -89,13 +89,12 @@ $(document).ready(function() {
 					   		$('#per5').val(value.per5);
 					   		$('#per6').val(value.per6);
 					   		$('#per7').val(value.per7);
-
 					   		found =true; // the input id was found in students.json, a valid id was entered
 
 					   		// reenable buttons, inputs, selects after input of valid id and populating form data from students.json file
 							$('input, select, button, submit').each(function(){
 									var $input = $(this);			   			
-									$input.removeAttr('disabled');
+									$input.prop('disabled', false);
 							});
 					   		return(false);
 					   	}
@@ -224,6 +223,13 @@ $(document).ready(function() {
 			element.val("");
 			element.focus();
 		});
+
+		$('#add_student').on('shown.bs.modal', function () { // give focus to the input field
+			element = $('#add_first');
+			element.val("");
+			element.focus();
+		});
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

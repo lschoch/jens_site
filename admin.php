@@ -6,14 +6,46 @@ include("inc/header.php");
 
 <body>
 
-<!-- delete modal -->
+<!-- add student modal -->
+<div  id="add_student" class="modal fade"  role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" data-target="#add_student">&times;</button>
+                <h4 class="modal-title center">Add student</h4>
+            </div>
+            <div class="modal-body">
+                <form id="add_form" class="form_block center" action="add_process.php" method="post" role="form">
+                    <div id="add_form_group" class="form-group inline">
+                        <div class="form-group">
+                            <label class="sr-only" for="add_first">First Name</label>
+                            <input type="text" class="form-control" id="add_first" name="add_first" required placeholder="First Name"> 
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="mod_last">Last Name</label>
+                            <input type="text" class="form-control" id="add_last" name="add_last" required placeholder="Last Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="add_modal" id="add_modal" class="btn btn-info" value="Add">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- end add student modal-->
+
+<!-- delete student modal -->
 <div  id="delete_student" class="modal fade"  role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
 
             <div class="modal-header">
-                <button type="button" id="xxclose" class="close" data-dismiss="modal" data-target="#delete_student">&times;</button>
-                <h4 class="modal-title center">Delete student using Student ID.</h4>
+                <button type="button" class="close" data-dismiss="modal" data-target="#delete_student">&times;</button>
+                <h4 class="modal-title center">Delete student using Student ID</h4>
             </div>
             <div class="modal-body">
                 <form id="mod_del" class="form_block center" action="delete_process.php" method="post" role="form">
@@ -32,7 +64,7 @@ include("inc/header.php");
         </div>
     </div>
 </div>
-<!-- end delete modal-->
+<!-- end delete student modal-->
 
 <div class="container">
     <div id="admin_well" class="inline well">
@@ -50,7 +82,7 @@ include("inc/header.php");
     </form>
 
     <div id="center_div">
-        <input type="button" value="Add Student" id="add_student" class="btn btn-info btn-sm">
+        <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#add_student" id="add_stud_trig">Add Student</button>
         <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#delete_student" id="del_stud_trig">Delete Student</button>
     </div>
 
