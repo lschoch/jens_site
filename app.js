@@ -30,18 +30,6 @@ $(document).ready(function() {
 			formmodified=1;
 		});
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		$('#profile_form').focusin(function() { 
-			reset_select = $('#mod_first, #mod_last, #mod_email')
-			reset_select.each(function() { //reset mod_form
-				$(this).val("");
-				$(this).removeClass("valid").addClass("invalid");
-			});
-			stud_id = $('#student_id');
-			student_id.focus(); // give focus to back to student_id field
-		});
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 		$('#mod_form').change(function() { // no need to confirmExit if student ID is requested; i.e., allow abandonment of changes to profile form
 			formmodified=0;
 		});
